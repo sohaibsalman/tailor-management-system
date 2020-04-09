@@ -38,6 +38,47 @@ namespace TMS.DAL
             }
         }
 
+        public string AssingToWorker(Customer selectedCustomer, Worker selectedWorker, string orderName)
+        {
+            SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+
+            try
+            {
+                con.Open();
+
+                String query = "SELECT ID FROM Orders WHERE CustomerID = @cid AND OrderName = @ordername AND STATUS = 0";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@cid", selectedCustomer.ID);
+                cmd.Parameters.AddWithValue("@ordername", selectedWorker.Name);
+
+                int id = (int)cmd.ExecuteScalar();
+
+                query = "INSERT INTO OrdersAssigned (WorkerID, CustomerID, OrderID, Status) VALUES (@wid, @cusid, @oid, 1)";
+                cmd.Parameters.AddWithValue("@wid", selectedWorker.ID);
+                cmd.Parameters.AddWithValue("@cusid", selectedCustomer.ID);
+                cmd.Parameters.AddWithValue("@oid", id);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res < 0)
+                    return "error";
+
+                query = "UPDATE Orders SET Status = 1 WHERE OrderID = " + id;
+                res = cmd.ExecuteNonQuery();
+                if (res < 0)
+                    return "error";
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return "";
+        }
+
         public List<string> GetTypeOfMeasurement(int id)
         {
             List<String> list = new List<string>();
@@ -45,9 +86,9 @@ namespace TMS.DAL
             try
             {
                 con.Open();
-                String query = "SELECT * FROM Orders WHERE ID = " + id;
+                String query = "SELECT * FROM Orders WHERE CustomerID = @id";
                 SqlCommand cmd = new SqlCommand(query, con);
-
+                cmd.Parameters.AddWithValue("@id", id);
 
                 SqlDataReader reader = cmd.ExecuteReader();
 

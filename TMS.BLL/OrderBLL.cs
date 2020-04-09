@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TMS.Common;
 using TMS.DAL;
 
 namespace TMS.BLL
@@ -12,6 +13,11 @@ namespace TMS.BLL
         public List<string> GetTypeOfMeasurement(int ID)
         {
             return new OrderDAL().GetTypeOfMeasurement(ID);
+        }
+
+        public string AssingToWorker(Customer selectedCustomer, Worker selectedWorker, string orderName)
+        {
+            return new OrderDAL().AssingToWorker(selectedCustomer, selectedWorker, orderName);
         }
     }
 }

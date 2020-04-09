@@ -23,7 +23,14 @@ namespace Windows.UI
         {
             List<Customer> customerList = new CustomerBLL().GetAllCustomers();
             cbxCustomer.DataSource = customerList;
-            cbxCustomer.DisplayMember = "Name";            
+            cbxCustomer.DisplayMember = "Name";
+
+            List<Worker> workerList = new WorkerBLL().GetAllWorkers();
+            cbxWorker.DataSource = workerList;
+            cbxWorker.DisplayMember = "Name";
+
+            DataTable table = new WorkerBLL().GetWorkersStats(workerList);
+            tableWorkerInfo.DataSource = table;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -36,8 +43,25 @@ namespace Windows.UI
             Customer c = (Customer) cbxCustomer.SelectedValue;
             List<String> list = new OrderBLL().GetTypeOfMeasurement(c.ID);
 
-            cbxMeasurement.DataSource = list;
-            cbxMeasurement.DisplayMember = "OrderName";
+            cbxOrderName.DataSource = list;
+            cbxOrderName.DisplayMember = "OrderName";
+        }
+
+        private void btnAssign_Click(object sender, EventArgs e)
+        {
+            Worker selectedWorker = (Worker)cbxWorker.SelectedValue;
+            Customer selectedCustomer = (Customer)cbxCustomer.SelectedValue;
+            String orderName = cbxOrderName.SelectedValue.ToString();
+
+            String msg = new OrderBLL().AssingToWorker(selectedCustomer, selectedWorker, orderName);
+            if(msg.Trim() == "")
+            {
+                MessageBox.Show("Task Assigned", "Success");
+            }
+            else
+            {
+                MessageBox.Show("Unable to Assign Task", "Error");
+            }
         }
     }
 }

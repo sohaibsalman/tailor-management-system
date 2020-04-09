@@ -28,12 +28,8 @@ namespace TMS.DAL
 
         public DataTable GetMeasurementsFromFile(string name)
         {
-
-            List<string> list = new List<string>();
-
             DataTable dt = new DataTable();
             dt.Columns.Add("Measurements Name");
-
 
             using (StreamReader file = new StreamReader("Measurements/" + name + ".txt"))
             {
