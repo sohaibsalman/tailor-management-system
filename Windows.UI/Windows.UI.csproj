@@ -64,6 +64,12 @@
     <Compile Include="FormAddWorker.Designer.cs">
       <DependentUpon>FormAddWorker.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAssignWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAssignWork.Designer.cs">
+      <DependentUpon>FormAssignWork.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddWorker.resx">
       <DependentUpon>FormAddWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAssignWork.resx">
+      <DependentUpon>FormAssignWork.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCreateUser.resx">
       <DependentUpon>FormCreateUser.cs</DependentUpon>

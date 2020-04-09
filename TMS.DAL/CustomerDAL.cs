@@ -12,8 +12,6 @@ namespace TMS.DAL
     {
         public string AddCustomer(Customer c, List<string> orderName)
         {
-            String msg = "";
-
             try
             {
                 SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
@@ -32,7 +30,7 @@ namespace TMS.DAL
                 int res = cmd.ExecuteNonQuery();
 
                 if (res < 0)
-                    msg = "error";
+                    return "error";
 
                 query = "SELECT * FROM Customers ";
 
@@ -74,14 +72,19 @@ namespace TMS.DAL
 
                     query += ")";
 
-
-
                     cmd = new SqlCommand(query, con);
                     res = cmd.ExecuteNonQuery();
 
                     if (res < 0)
-                        msg = "error";
+                        return "error";
 
+
+                    Order o = new Order();
+                    o.CustomerID = id;
+                    o.OrderName = orderName.ElementAt(i).Trim();
+                    o.Status = false;
+
+                    new OrderDAL().AddNewOrder(o);
                 }
 
             }
@@ -91,7 +94,41 @@ namespace TMS.DAL
                 throw ex;
             }
 
-            return msg;
+            return "";
+        }
+
+        public List<Customer> GellAllCustomers()
+        {
+            SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+            List<Customer> list = new List<Customer>();
+            try
+            {
+                con.Open();
+                String query = "SELECT * FROM Customers";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    Customer c = new Customer();
+                    c.ID = (int) reader["ID"];
+                    c.Name = reader["Name"].ToString();
+                    c.CNIC = reader["CNIC"].ToString();
+                    c.ContactNumber = reader["ContactNumber"].ToString();
+                    c.Address = reader["Address"].ToString();
+                    c.Remarks = reader["Remarks"].ToString();
+                    list.Add(c);
+                }
+                reader.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return list;
         }
     }
 }

@@ -19,3 +19,4 @@ D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\Wi
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\Windows.UI\obj\Debug\Windows.UI.FormAddCustomer.resources
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\Windows.UI\obj\Debug\Windows.UI.FormMeasurements.resources
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\Windows.UI\obj\Debug\Windows.UI.FormAddMeasurementFile.resources
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\Windows.UI\obj\Debug\Windows.UI.FormAssignWork.resources

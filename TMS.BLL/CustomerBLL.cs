@@ -14,5 +14,10 @@ namespace TMS.BLL
         {
             return new CustomerDAL().AddCustomer(c, orders);
         }
+
+        public List<Customer> GetAllCustomers()
+        {
+            return new CustomerDAL().GellAllCustomers();
+        }
     }
 }

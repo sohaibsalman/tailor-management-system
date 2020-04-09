@@ -43,5 +43,10 @@ namespace Windows.UI
         {
             new FormAddCustomer().ShowDialog();
         }
+
+        private void assignWorkToWorkerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FormAssignWork().ShowDialog();
+        }
     }
 }

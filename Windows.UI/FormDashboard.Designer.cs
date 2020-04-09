@@ -199,6 +199,7 @@
             this.assignWorkToWorkerToolStripMenuItem.Name = "assignWorkToWorkerToolStripMenuItem";
             this.assignWorkToWorkerToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.assignWorkToWorkerToolStripMenuItem.Text = "Assign Work to Worker";
+            this.assignWorkToWorkerToolStripMenuItem.Click += new System.EventHandler(this.assignWorkToWorkerToolStripMenuItem_Click);
             // 
             // checkWorkStatusToolStripMenuItem
             // 
