@@ -1,0 +1,9 @@
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\bin\Debug\TMS.BLL.dll
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\bin\Debug\TMS.BLL.pdb
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\bin\Debug\TMS.Common.dll
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\bin\Debug\TMS.DAL.dll
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\bin\Debug\TMS.Common.pdb
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\bin\Debug\TMS.DAL.pdb
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\obj\Debug\TMS.BLL.csprojResolveAssemblyReference.cache
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\obj\Debug\TMS.BLL.dll
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\obj\Debug\TMS.BLL.pdb

@@ -1,0 +1,7 @@
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\bin\Debug\TMS.DAL.dll
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\bin\Debug\TMS.DAL.pdb
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\bin\Debug\TMS.Common.dll
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\bin\Debug\TMS.Common.pdb
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\obj\Debug\TMS.DAL.csprojResolveAssemblyReference.cache
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\obj\Debug\TMS.DAL.dll
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\obj\Debug\TMS.DAL.pdb
