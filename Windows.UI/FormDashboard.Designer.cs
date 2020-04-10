@@ -209,12 +209,14 @@
             this.customerToolStripMenuItem1.Name = "customerToolStripMenuItem1";
             this.customerToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
             this.customerToolStripMenuItem1.Text = "Customer";
+            this.customerToolStripMenuItem1.Click += new System.EventHandler(this.customerToolStripMenuItem1_Click);
             // 
             // userToolStripMenuItem2
             // 
             this.userToolStripMenuItem2.Name = "userToolStripMenuItem2";
             this.userToolStripMenuItem2.Size = new System.Drawing.Size(152, 24);
             this.userToolStripMenuItem2.Text = "User";
+            this.userToolStripMenuItem2.Click += new System.EventHandler(this.userToolStripMenuItem2_Click);
             // 
             // deleteToolStripMenuItem
             // 

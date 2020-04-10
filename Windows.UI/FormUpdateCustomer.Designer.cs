@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.txtSalary = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtContactNumber = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtContacNumber = new System.Windows.Forms.TextBox();
+            this.txtCNIC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,26 +56,6 @@
             this.panel1.Size = new System.Drawing.Size(781, 175);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnClose);
-            this.panel2.Controls.Add(this.btnSearch);
-            this.panel2.Controls.Add(this.btnUpdate);
-            this.panel2.Controls.Add(this.txtSalary);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.txtAddress);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.txtContacNumber);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.txtFullName);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(23, 113);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(727, 385);
-            this.panel2.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -88,6 +68,26 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Update Customer";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnClose);
+            this.panel2.Controls.Add(this.btnSearch);
+            this.panel2.Controls.Add(this.btnUpdate);
+            this.panel2.Controls.Add(this.txtAddress);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.txtContactNumber);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.txtCNIC);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.txtFullName);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(23, 113);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(727, 385);
+            this.panel2.TabIndex = 0;
+            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Firebrick;
@@ -98,7 +98,7 @@
             this.btnClose.Location = new System.Drawing.Point(585, 277);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(92, 48);
-            this.btnClose.TabIndex = 135;
+            this.btnClose.TabIndex = 7;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             // 
@@ -112,7 +112,7 @@
             this.btnSearch.Location = new System.Drawing.Point(487, 277);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(92, 48);
-            this.btnSearch.TabIndex = 134;
+            this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
@@ -126,17 +126,17 @@
             this.btnUpdate.Location = new System.Drawing.Point(389, 277);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(92, 48);
-            this.btnUpdate.TabIndex = 133;
+            this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             // 
-            // txtSalary
+            // txtAddress
             // 
-            this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalary.Location = new System.Drawing.Point(174, 222);
-            this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(495, 26);
-            this.txtSalary.TabIndex = 132;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(174, 222);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(495, 26);
+            this.txtAddress.TabIndex = 4;
             // 
             // label5
             // 
@@ -148,13 +148,13 @@
             this.label5.TabIndex = 136;
             this.label5.Text = "Address";
             // 
-            // txtAddress
+            // txtContactNumber
             // 
-            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(174, 164);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(495, 26);
-            this.txtAddress.TabIndex = 131;
+            this.txtContactNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContactNumber.Location = new System.Drawing.Point(174, 164);
+            this.txtContactNumber.Name = "txtContactNumber";
+            this.txtContactNumber.Size = new System.Drawing.Size(495, 26);
+            this.txtContactNumber.TabIndex = 3;
             // 
             // label4
             // 
@@ -166,13 +166,13 @@
             this.label4.TabIndex = 137;
             this.label4.Text = "Contact Numner";
             // 
-            // txtContacNumber
+            // txtCNIC
             // 
-            this.txtContacNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContacNumber.Location = new System.Drawing.Point(174, 110);
-            this.txtContacNumber.Name = "txtContacNumber";
-            this.txtContacNumber.Size = new System.Drawing.Size(495, 26);
-            this.txtContacNumber.TabIndex = 130;
+            this.txtCNIC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCNIC.Location = new System.Drawing.Point(174, 110);
+            this.txtCNIC.Name = "txtCNIC";
+            this.txtCNIC.Size = new System.Drawing.Size(495, 26);
+            this.txtCNIC.TabIndex = 2;
             // 
             // label3
             // 
@@ -190,7 +190,7 @@
             this.txtFullName.Location = new System.Drawing.Point(174, 59);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(495, 26);
-            this.txtFullName.TabIndex = 129;
+            this.txtFullName.TabIndex = 1;
             // 
             // label2
             // 
@@ -230,11 +230,11 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.TextBox txtSalary;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtContactNumber;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtContacNumber;
+        private System.Windows.Forms.TextBox txtCNIC;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Label label2;

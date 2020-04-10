@@ -94,6 +94,18 @@
     <Compile Include="FormMeasurements.Designer.cs">
       <DependentUpon>FormMeasurements.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateCustomer.Designer.cs">
+      <DependentUpon>FormUpdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateUser.Designer.cs">
+      <DependentUpon>FormUpdateUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUpdateWorker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +137,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMeasurements.resx">
       <DependentUpon>FormMeasurements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateCustomer.resx">
+      <DependentUpon>FormUpdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateUser.resx">
+      <DependentUpon>FormUpdateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateWorker.resx">
       <DependentUpon>FormUpdateWorker.cs</DependentUpon>

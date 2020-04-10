@@ -71,5 +71,15 @@ namespace Windows.UI
         {
             new FormUpdateWorker().ShowDialog();
         }
+
+        private void customerToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new FormUpdateCustomer().ShowDialog();
+        }
+
+        private void userToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            new FormUpdateUser().ShowDialog();
+        }
     }
 }
