@@ -53,7 +53,10 @@ namespace Windows.UI
             Customer selectedCustomer = (Customer)cbxCustomer.SelectedValue;
             String orderName = cbxOrderName.SelectedValue.ToString();
 
-            String msg = new OrderBLL().AssingToWorker(selectedCustomer, selectedWorker, orderName);
+            int price = Convert.ToInt32(txtPrice.Text);
+            DateTime assignmentDate = Convert.ToDateTime(dateTimePicker1.Value);
+
+            String msg = new OrderBLL().AssingToWorker(selectedCustomer, selectedWorker, orderName, price, assignmentDate);
             if(msg.Trim() == "")
             {
                 MessageBox.Show("Task Assigned", "Success");

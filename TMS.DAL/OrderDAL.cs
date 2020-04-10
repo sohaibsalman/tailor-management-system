@@ -38,7 +38,7 @@ namespace TMS.DAL
             }
         }
 
-        public string AssingToWorker(Customer selectedCustomer, Worker selectedWorker, string orderName)
+        public string AssingToWorker(Customer selectedCustomer, Worker selectedWorker, string orderName, int price, DateTime date)
         {
             SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
 
@@ -49,20 +49,26 @@ namespace TMS.DAL
                 String query = "SELECT ID FROM Orders WHERE CustomerID = @cid AND OrderName = @ordername AND STATUS = 0";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@cid", selectedCustomer.ID);
-                cmd.Parameters.AddWithValue("@ordername", selectedWorker.Name);
+                cmd.Parameters.AddWithValue("@ordername", orderName);
 
                 int id = (int)cmd.ExecuteScalar();
 
-                query = "INSERT INTO OrdersAssigned (WorkerID, CustomerID, OrderID, Status) VALUES (@wid, @cusid, @oid, 1)";
+                query = "INSERT INTO [OrdersAssigned] (WorkerID, CustomerID, OrderID, Price, DateOfAssignment, Status) VALUES (@wid, @cusid, @oid, @price, @date, @status)";
+                cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@wid", selectedWorker.ID);
                 cmd.Parameters.AddWithValue("@cusid", selectedCustomer.ID);
                 cmd.Parameters.AddWithValue("@oid", id);
+                cmd.Parameters.AddWithValue("@price", price);
+                cmd.Parameters.AddWithValue("@date", date);
+                cmd.Parameters.AddWithValue("@status", 0);
 
                 int res = cmd.ExecuteNonQuery();
                 if (res < 0)
                     return "error";
 
-                query = "UPDATE Orders SET Status = 1 WHERE OrderID = " + id;
+                query = "UPDATE Orders SET Status = 1 WHERE ID = " + id;
+                cmd = new SqlCommand(query, con);
+            
                 res = cmd.ExecuteNonQuery();
                 if (res < 0)
                     return "error";
@@ -101,8 +107,11 @@ namespace TMS.DAL
             }
             catch (Exception)
             {
-
                 throw;
+            }
+            finally
+            {
+                con.Close();
             }
 
             return list;

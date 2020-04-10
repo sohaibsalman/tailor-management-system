@@ -15,9 +15,9 @@ namespace TMS.BLL
             return new OrderDAL().GetTypeOfMeasurement(ID);
         }
 
-        public string AssingToWorker(Customer selectedCustomer, Worker selectedWorker, string orderName)
+        public string AssingToWorker(Customer selectedCustomer, Worker selectedWorker, string orderName, int price, DateTime date)
         {
-            return new OrderDAL().AssingToWorker(selectedCustomer, selectedWorker, orderName);
+            return new OrderDAL().AssingToWorker(selectedCustomer, selectedWorker, orderName, price, date);
         }
     }
 }

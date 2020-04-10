@@ -71,6 +71,7 @@ namespace TMS.DAL
 
 
                     query = "SELECT COUNT(*) FROM OrdersAssigned WHERE WorkerID = @wid AND Status = 1";
+                    cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@wid", workerList.ElementAt(i).ID);
                     int completed = (int)cmd.ExecuteScalar();
 

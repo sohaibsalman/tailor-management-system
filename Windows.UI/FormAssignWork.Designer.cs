@@ -38,11 +38,9 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableWorkerInfo = new System.Windows.Forms.DataGridView();
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -117,10 +115,10 @@
             // btnAssign
             // 
             this.btnAssign.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAssign.Location = new System.Drawing.Point(641, 211);
+            this.btnAssign.Location = new System.Drawing.Point(641, 161);
             this.btnAssign.Name = "btnAssign";
             this.btnAssign.Size = new System.Drawing.Size(98, 39);
-            this.btnAssign.TabIndex = 4;
+            this.btnAssign.TabIndex = 5;
             this.btnAssign.Text = "Assign";
             this.btnAssign.UseVisualStyleBackColor = true;
             this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
@@ -128,10 +126,10 @@
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(745, 211);
+            this.btnClose.Location = new System.Drawing.Point(745, 161);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(98, 39);
-            this.btnClose.TabIndex = 5;
+            this.btnClose.TabIndex = 6;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -150,65 +148,46 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(523, 86);
+            this.label5.Location = new System.Drawing.Point(64, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 20);
             this.label5.TabIndex = 10;
             this.label5.Text = "Order Price";
             // 
-            // textBox1
+            // txtPrice
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(527, 111);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 26);
-            this.textBox1.TabIndex = 15;
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(68, 174);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(316, 26);
+            this.txtPrice.TabIndex = 3;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(527, 172);
+            this.dateTimePicker1.Location = new System.Drawing.Point(527, 111);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(316, 26);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dateTimePicker1.TabIndex = 4;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(523, 149);
+            this.label6.Location = new System.Drawing.Point(523, 88);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(150, 20);
             this.label6.TabIndex = 10;
             this.label6.Text = "Date of Assignment";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(64, 149);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 20);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Remarks";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(68, 172);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(316, 78);
-            this.textBox2.TabIndex = 15;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.tableWorkerInfo);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(68, 259);
+            this.groupBox1.Location = new System.Drawing.Point(68, 213);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(775, 334);
-            this.groupBox1.TabIndex = 17;
+            this.groupBox1.Size = new System.Drawing.Size(775, 363);
+            this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Workers Info";
             // 
@@ -226,7 +205,7 @@
             this.tableWorkerInfo.Name = "tableWorkerInfo";
             this.tableWorkerInfo.ReadOnly = true;
             this.tableWorkerInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tableWorkerInfo.Size = new System.Drawing.Size(763, 303);
+            this.tableWorkerInfo.Size = new System.Drawing.Size(763, 332);
             this.tableWorkerInfo.TabIndex = 18;
             // 
             // colName
@@ -268,8 +247,7 @@
             this.ClientSize = new System.Drawing.Size(915, 616);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.btnAddCustomer);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAssign);
@@ -278,7 +256,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbxOrderName);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbxCustomer);
             this.Controls.Add(this.label1);
@@ -306,11 +283,9 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnAddCustomer;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView tableWorkerInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colName;
