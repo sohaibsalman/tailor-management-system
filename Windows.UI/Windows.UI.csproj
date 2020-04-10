@@ -94,6 +94,12 @@
     <Compile Include="FormMeasurements.Designer.cs">
       <DependentUpon>FormMeasurements.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUpdateWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateWorker.Designer.cs">
+      <DependentUpon>FormUpdateWorker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAddCustomer.resx">
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMeasurements.resx">
       <DependentUpon>FormMeasurements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateWorker.resx">
+      <DependentUpon>FormUpdateWorker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

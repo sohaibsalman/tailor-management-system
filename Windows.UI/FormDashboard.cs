@@ -66,5 +66,10 @@ namespace Windows.UI
         {
             lblUsername.Text = username;
         }
+
+        private void userToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new FormUpdateWorker().ShowDialog();
+        }
     }
 }
