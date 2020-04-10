@@ -14,6 +14,7 @@ namespace Windows.UI
 {
     public partial class FormLogin : Form
     {
+        public static String username = "";
         public FormLogin()
         {
             InitializeComponent();
@@ -38,6 +39,8 @@ namespace Windows.UI
                 if (user.Password == txtPassword.Text)
                 {
                     this.Hide();
+                    User u = (User)cbxUsername.SelectedValue;
+                    FormDashboard.username = u.Username;
                     new FormDashboard().ShowDialog();
                     this.Close();
                 }

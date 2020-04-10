@@ -128,6 +128,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -151,6 +152,48 @@
       <Project>{5fd1854c-2525-4316-8789-ef8928ef37be}</Project>
       <Name>TMS.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tailor-logo-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_administrator_male_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_512px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_administrator_male_127px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_35px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staff_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\combo_chart_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_rounded_left_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_window_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_window_20px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -12,6 +12,7 @@ namespace Windows.UI
 {
     public partial class FormDashboard : Form
     {
+        public static String username;
         public FormDashboard()
         {
             InitializeComponent();
@@ -47,6 +48,23 @@ namespace Windows.UI
         private void assignWorkToWorkerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FormAssignWork().ShowDialog();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new FormLogin().ShowDialog();
+            this.Close();
+        }
+
+        private void FormDashboard_Load(object sender, EventArgs e)
+        {
+            lblUsername.Text = username;
         }
     }
 }
