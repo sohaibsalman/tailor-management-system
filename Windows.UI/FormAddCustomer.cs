@@ -42,9 +42,12 @@ namespace Windows.UI
         private void btnAddItem_Click(object sender, EventArgs e)
         {
             new FormMeasurements().ShowDialog();
-            lstMeasurements.Items.Add(FormMeasurements.measurementName);
+            if(FormMeasurements.measurementName != "")
+            {
+                lstMeasurements.Items.Add(FormMeasurements.measurementName);
+                list.Add(FormMeasurements.measurementValues);
+            }
 
-            list.Add(FormMeasurements.measurementValues);
         }
 
         private void FormAddCustomer_Load(object sender, EventArgs e)

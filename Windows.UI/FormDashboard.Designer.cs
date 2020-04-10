@@ -126,14 +126,14 @@
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.logoutToolStripMenuItem.Text = "&Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.exitToolStripMenuItem.Text = "&Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -151,7 +151,7 @@
             // createUserToolStripMenuItem
             // 
             this.createUserToolStripMenuItem.Name = "createUserToolStripMenuItem";
-            this.createUserToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
+            this.createUserToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.createUserToolStripMenuItem.Text = "Create User";
             this.createUserToolStripMenuItem.Click += new System.EventHandler(this.createUserToolStripMenuItem_Click);
             // 
@@ -161,7 +161,7 @@
             this.userToolStripMenuItem,
             this.customerToolStripMenuItem});
             this.addWorkerToolStripMenuItem.Name = "addWorkerToolStripMenuItem";
-            this.addWorkerToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
+            this.addWorkerToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.addWorkerToolStripMenuItem.Text = "Add";
             // 
             // userToolStripMenuItem
@@ -185,7 +185,7 @@
             this.customerToolStripMenuItem1,
             this.userToolStripMenuItem2});
             this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
-            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
+            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.addCustomerToolStripMenuItem.Text = "Update";
             // 
             // userToolStripMenuItem1
@@ -213,7 +213,7 @@
             this.workerToolStripMenuItem,
             this.customerToolStripMenuItem2});
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // userToolStripMenuItem3
@@ -369,6 +369,7 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(74)))), ((int)(((byte)(114)))));
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -387,6 +388,7 @@
             // btnSignOut
             // 
             this.btnSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(74)))), ((int)(((byte)(114)))));
+            this.btnSignOut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignOut.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSignOut.FlatAppearance.BorderSize = 0;
             this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -405,6 +407,7 @@
             // btnReports
             // 
             this.btnReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(74)))), ((int)(((byte)(114)))));
+            this.btnReports.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReports.FlatAppearance.BorderSize = 0;
             this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -422,6 +425,7 @@
             // btnUsers
             // 
             this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(74)))), ((int)(((byte)(114)))));
+            this.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUsers.FlatAppearance.BorderSize = 0;
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -439,6 +443,7 @@
             // btnSettings
             // 
             this.btnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(74)))), ((int)(((byte)(114)))));
+            this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSettings.FlatAppearance.BorderSize = 0;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

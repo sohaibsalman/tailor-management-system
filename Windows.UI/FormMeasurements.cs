@@ -15,7 +15,7 @@ namespace Windows.UI
     public partial class FormMeasurements : Form
     {
         public static Dictionary<string, int> measurementValues;
-        public static String measurementName;
+        public static String measurementName = "";
 
         public FormMeasurements()
         {
@@ -63,14 +63,25 @@ namespace Windows.UI
 
             int rows = tableMeasurements.RowCount;
 
+            bool flag = false;
+
             for (int i = 0; i < rows; i++)
             {
                 string name = tableMeasurements[1, i].Value.ToString();
-                int value = Convert.ToInt32((string)tableMeasurements[0, i].Value);
-                measurementValues.Add(name, value);
+                if (tableMeasurements[0, i].Value != null)
+                {
+                    int value = Convert.ToInt32((string)tableMeasurements[0, i].Value);
+                    measurementValues.Add(name, value);
+                }
+                else
+                {
+                    flag = true;
+                    MessageBox.Show("Please enter all the Measurements", "Error");
+                    break;
+                }
             }
-
-            this.Close();
+            if(!flag)
+                this.Close();
         }
 
 
