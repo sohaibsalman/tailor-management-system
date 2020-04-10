@@ -70,6 +70,8 @@ namespace Windows.UI
                 if (msg.Trim() == "")
                 {
                     MessageBox.Show("Task Assigned", "Success");
+                    txtPrice.Text = "";
+                    FormAssignWork_Load(sender, e);
                 }
                 else
                 {

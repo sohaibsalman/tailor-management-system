@@ -76,7 +76,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(227, 52);
             this.label2.TabIndex = 27;
-            this.label2.Text = "Assing Work";
+            this.label2.Text = "Assign Work";
             // 
             // panel2
             // 
