@@ -136,7 +136,7 @@
             this.chkActive.Location = new System.Drawing.Point(153, 367);
             this.chkActive.Name = "chkActive";
             this.chkActive.Size = new System.Drawing.Size(88, 24);
-            this.chkActive.TabIndex = 0;
+            this.chkActive.TabIndex = 5;
             this.chkActive.Text = "Is Active";
             this.chkActive.UseVisualStyleBackColor = true;
             // 
@@ -146,7 +146,7 @@
             this.btnAdd.Location = new System.Drawing.Point(312, 416);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(94, 39);
-            this.btnAdd.TabIndex = 5;
+            this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -157,7 +157,7 @@
             this.btnClear.Location = new System.Drawing.Point(412, 416);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(94, 39);
-            this.btnClear.TabIndex = 6;
+            this.btnClear.TabIndex = 7;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -168,7 +168,7 @@
             this.btnClose.Location = new System.Drawing.Point(512, 416);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(94, 39);
-            this.btnClose.TabIndex = 7;
+            this.btnClose.TabIndex = 8;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);

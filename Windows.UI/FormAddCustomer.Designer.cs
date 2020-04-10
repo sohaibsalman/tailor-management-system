@@ -200,29 +200,30 @@
             // 
             this.lstMeasurements.FormattingEnabled = true;
             this.lstMeasurements.ItemHeight = 20;
-            this.lstMeasurements.Location = new System.Drawing.Point(17, 25);
+            this.lstMeasurements.Location = new System.Drawing.Point(6, 56);
             this.lstMeasurements.Name = "lstMeasurements";
-            this.lstMeasurements.Size = new System.Drawing.Size(351, 324);
+            this.lstMeasurements.Size = new System.Drawing.Size(373, 364);
             this.lstMeasurements.TabIndex = 0;
             // 
             // btnRemoveItem
             // 
-            this.btnRemoveItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveItem.Location = new System.Drawing.Point(201, 366);
+            this.btnRemoveItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveItem.Location = new System.Drawing.Point(335, 14);
             this.btnRemoveItem.Name = "btnRemoveItem";
-            this.btnRemoveItem.Size = new System.Drawing.Size(167, 39);
+            this.btnRemoveItem.Size = new System.Drawing.Size(44, 39);
             this.btnRemoveItem.TabIndex = 2;
-            this.btnRemoveItem.Text = "Remove";
+            this.btnRemoveItem.Text = "-";
             this.btnRemoveItem.UseVisualStyleBackColor = true;
+            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
             // 
             // btnAddItem
             // 
-            this.btnAddItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddItem.Location = new System.Drawing.Point(17, 366);
+            this.btnAddItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddItem.Location = new System.Drawing.Point(285, 14);
             this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(167, 39);
+            this.btnAddItem.Size = new System.Drawing.Size(44, 39);
             this.btnAddItem.TabIndex = 1;
-            this.btnAddItem.Text = "Add";
+            this.btnAddItem.Text = "+";
             this.btnAddItem.UseVisualStyleBackColor = true;
             this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 

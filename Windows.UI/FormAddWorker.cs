@@ -39,24 +39,31 @@ namespace Windows.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Worker w = new Worker();
-
-            w.Name = txtName.Text;
-            w.ContactNumber = txtContactNumber.Text;
-            w.Address = txtAddress.Text;
-            w.JoiningDate = dtDateOfJoining.Value;
-            w.Salary = Convert.ToInt32(txtSalary.Text);
-
-            String msg = new WorkerBLL().AddWoker(w);
-
-            if(msg.Trim() == "")
+            if(txtName.Text.Trim() != "" && txtContactNumber.Text.Trim() != "" && txtAddress.Text.Trim() != "" && txtSalary.Text.Trim() != "")
             {
-                MessageBox.Show("Worker Added!", "Success");
-                ClearForm();
+                Worker w = new Worker();
+
+                w.Name = txtName.Text;
+                w.ContactNumber = txtContactNumber.Text;
+                w.Address = txtAddress.Text;
+                w.JoiningDate = dtDateOfJoining.Value;            
+
+                w.Salary = Convert.ToInt32(txtSalary.Text);
+
+                String msg = new WorkerBLL().AddWoker(w);
+
+                if (msg.Trim() == "")
+                {
+                    MessageBox.Show("Worker Added!", "Success");
+                    ClearForm();
+                }
+                else
+                    MessageBox.Show("Error Adding Worker", "Error");
             }
             else
-                MessageBox.Show("Error Adding Worker", "Error");
-
+            {
+                MessageBox.Show("Please fill all the input fields", "Error");
+            }
         }
     }
 }

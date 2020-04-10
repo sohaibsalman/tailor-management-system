@@ -49,21 +49,32 @@ namespace Windows.UI
 
         private void btnAssign_Click(object sender, EventArgs e)
         {
-            Worker selectedWorker = (Worker)cbxWorker.SelectedValue;
-            Customer selectedCustomer = (Customer)cbxCustomer.SelectedValue;
-            String orderName = cbxOrderName.SelectedValue.ToString();
-
-            int price = Convert.ToInt32(txtPrice.Text);
-            DateTime assignmentDate = Convert.ToDateTime(dateTimePicker1.Value);
-
-            String msg = new OrderBLL().AssingToWorker(selectedCustomer, selectedWorker, orderName, price, assignmentDate);
-            if(msg.Trim() == "")
+            if(cbxCustomer.SelectedIndex == -1 || cbxOrderName.SelectedIndex == -1 || cbxWorker.SelectedIndex == -1)
             {
-                MessageBox.Show("Task Assigned", "Success");
+                MessageBox.Show("Please Select Value from List!", "Error");
+            }
+            else if(txtPrice.Text.Trim() == "")
+            {
+                MessageBox.Show("Please input all form fields!", "Error");
             }
             else
             {
-                MessageBox.Show("Unable to Assign Task", "Error");
+                Worker selectedWorker = (Worker)cbxWorker.SelectedValue;
+                Customer selectedCustomer = (Customer)cbxCustomer.SelectedValue;
+                String orderName = cbxOrderName.SelectedValue.ToString();
+
+                int price = Convert.ToInt32(txtPrice.Text);
+                DateTime assignmentDate = Convert.ToDateTime(dateTimePicker1.Value);
+
+                String msg = new OrderBLL().AssingToWorker(selectedCustomer, selectedWorker, orderName, price, assignmentDate);
+                if (msg.Trim() == "")
+                {
+                    MessageBox.Show("Task Assigned", "Success");
+                }
+                else
+                {
+                    MessageBox.Show("Unable to Assign Task", "Error");
+                }
             }
         }
     }

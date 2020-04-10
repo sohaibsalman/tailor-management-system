@@ -54,34 +54,51 @@ namespace Windows.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //Create new Customer object
-            Customer c = new Customer();
-
-            //Add data from form to object
-            c.Name = txtName.Text;
-            c.CNIC = txtCNIC.Text;
-            c.ContactNumber = txtContactNumber.Text;
-            c.Address = txtAddress.Text;
-            c.Remarks = txtRemarks.Text;
-            c.Order = list;
-
-            //get data ordered item names
-            List<String> orderName = new List<string>();
-
-            for (int i = 0; i < lstMeasurements.Items.Count; i++)
+            if (txtName.Text.Trim() == "" || txtCNIC.Text.Trim() == "" || txtAddress.Text.Trim() == "" || txtContactNumber.Text.Trim() == "")
             {
-                lstMeasurements.SetSelected(i, true);
-                string item = lstMeasurements.SelectedItem.ToString();
-                orderName.Add(item);
+                MessageBox.Show("Please input all form fields!", "Error");
             }
-
-            String msg = new CustomerBLL().AddCustomer(c, orderName);
-            if (msg.Trim() == "")
+            else if(lstMeasurements.Items.Count == 0)
             {
-                MessageBox.Show("Customer Added Successfully", "Success");
+                MessageBox.Show("Please Add some measurements first!", "Error");
             }
             else
-                MessageBox.Show("Error Adding customer", "Error");
+            {
+                //Create new Customer object
+                Customer c = new Customer();
+
+                //Add data from form to object
+                c.Name = txtName.Text;
+                c.CNIC = txtCNIC.Text;
+                c.ContactNumber = txtContactNumber.Text;
+                c.Address = txtAddress.Text;
+                c.Remarks = txtRemarks.Text;
+                c.Order = list;
+
+                //get data ordered item names
+                List<String> orderName = new List<string>();
+
+                for (int i = 0; i < lstMeasurements.Items.Count; i++)
+                {
+                    lstMeasurements.SetSelected(i, true);
+                    string item = lstMeasurements.SelectedItem.ToString();
+                    orderName.Add(item);
+                }
+
+                String msg = new CustomerBLL().AddCustomer(c, orderName);
+                if (msg.Trim() == "")
+                {
+                    MessageBox.Show("Customer Added Successfully", "Success");
+                }
+                else
+                    MessageBox.Show("Error Adding customer", "Error");
+            }
+        }
+
+        private void btnRemoveItem_Click(object sender, EventArgs e)
+        {
+            int index = lstMeasurements.SelectedIndex;
+            lstMeasurements.Items.RemoveAt(index);
         }
     }
 }

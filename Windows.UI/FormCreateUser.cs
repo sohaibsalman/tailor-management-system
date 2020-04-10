@@ -40,28 +40,35 @@ namespace Windows.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            User user = new User();
-            //init user object
-            user.Name = txtName.Text;
-            user.Password = txtPassword.Text;
-            user.Username = txtUsername.Text;
-            if (cbxAccountType.SelectedItem.ToString() == "Admin")
-                user.IsAdmin = true;
-            else
-                user.IsAdmin = false;
-            if (chkActive.CheckState == CheckState.Checked)
-                user.IsActive = true;
-            else
-                user.IsActive = false;
-            //Call BLL Function to add user
-            String msg = new UserBLL().CreateUser(user);
-            if (msg.Trim() == "")
+            if (txtName.Text.Trim() == "" || txtPassword.Text.Trim() == "" || txtUsername.Text.Trim() == "")
             {
-                MessageBox.Show("User Created!", "Success");
-                ClearForm();
+                MessageBox.Show("Please Fill all the form inputs!", "Error");
             }
             else
-                MessageBox.Show("Error Adding User!", "Error");
+            {
+                User user = new User();
+                //init user object
+                user.Name = txtName.Text;
+                user.Password = txtPassword.Text.Trim();
+                user.Username = txtUsername.Text.Trim();
+                if (cbxAccountType.SelectedItem.ToString() == "Admin")
+                    user.IsAdmin = true;
+                else
+                    user.IsAdmin = false;
+                if (chkActive.CheckState == CheckState.Checked)
+                    user.IsActive = true;
+                else
+                    user.IsActive = false;
+                //Call BLL Function to add user
+                String msg = new UserBLL().CreateUser(user);
+                if (msg.Trim() == "")
+                {
+                    MessageBox.Show("User Created!", "Success");
+                    ClearForm();
+                }
+                else
+                    MessageBox.Show("Error Adding User!", "Error");
+            }
         }
 
         private void FormCreateUser_Load(object sender, EventArgs e)
