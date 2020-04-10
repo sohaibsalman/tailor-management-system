@@ -195,6 +195,18 @@
   <ItemGroup>
     <None Include="Resources\close_window_20px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers-png-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9346b16a1438fb97c3291e06933c0917_sewing-machine-clipart-cartoon-images_759-800.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\204-2040974_inventory-management-survey-icon-image-png.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
