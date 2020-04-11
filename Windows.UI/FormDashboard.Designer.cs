@@ -243,6 +243,7 @@
             this.checkWorkStatusToolStripMenuItem.Name = "checkWorkStatusToolStripMenuItem";
             this.checkWorkStatusToolStripMenuItem.Size = new System.Drawing.Size(219, 24);
             this.checkWorkStatusToolStripMenuItem.Text = "Finish Order";
+            this.checkWorkStatusToolStripMenuItem.Click += new System.EventHandler(this.checkWorkStatusToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
@@ -257,14 +258,14 @@
             // workerToolStripMenuItem1
             // 
             this.workerToolStripMenuItem1.Name = "workerToolStripMenuItem1";
-            this.workerToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
+            this.workerToolStripMenuItem1.Size = new System.Drawing.Size(138, 24);
             this.workerToolStripMenuItem1.Text = "Customer";
             this.workerToolStripMenuItem1.Click += new System.EventHandler(this.workerToolStripMenuItem1_Click);
             // 
             // customerToolStripMenuItem3
             // 
             this.customerToolStripMenuItem3.Name = "customerToolStripMenuItem3";
-            this.customerToolStripMenuItem3.Size = new System.Drawing.Size(152, 24);
+            this.customerToolStripMenuItem3.Size = new System.Drawing.Size(138, 24);
             this.customerToolStripMenuItem3.Text = "Worker";
             this.customerToolStripMenuItem3.Click += new System.EventHandler(this.customerToolStripMenuItem3_Click);
             // 
@@ -605,7 +606,7 @@
             // userToolStripMenuItem3
             // 
             this.userToolStripMenuItem3.Name = "userToolStripMenuItem3";
-            this.userToolStripMenuItem3.Size = new System.Drawing.Size(152, 24);
+            this.userToolStripMenuItem3.Size = new System.Drawing.Size(138, 24);
             this.userToolStripMenuItem3.Text = "User";
             this.userToolStripMenuItem3.Click += new System.EventHandler(this.userToolStripMenuItem3_Click);
             // 

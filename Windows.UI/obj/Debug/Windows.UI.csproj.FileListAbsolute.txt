@@ -28,3 +28,4 @@ D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\Wi
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\Windows.UI\obj\Debug\Windows.UI.FormSearchCustomer.resources
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\Windows.UI\obj\Debug\Windows.UI.FormSearchUser.resources
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\Windows.UI\obj\Debug\Windows.UI.FormSearchWorker.resources
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\Windows.UI\obj\Debug\Windows.UI.FormFinishOrder.resources

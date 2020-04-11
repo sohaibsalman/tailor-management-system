@@ -38,6 +38,91 @@ namespace TMS.DAL
             }
         }
 
+        public bool FinishOrder(int orderID)
+        {
+            bool flag = true;
+            SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+            try
+            {
+                con.Open();
+                String query = "UPDATE OrdersAssigned SET Status = 1 WHERE OrderID = @id";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@id", orderID);
+
+                int res = cmd.ExecuteNonQuery();
+                if(res < 0)
+                {
+                    flag = false;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return flag;
+        }
+
+        public List<OrdersAssigned> GetAllOrders()
+        {
+            List<OrdersAssigned> list = new List<OrdersAssigned>();
+
+            SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+            try
+            {
+                con.Open();
+                String query = "SELECT * FROM OrdersAssigned WHERE Status = 0";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    OrdersAssigned temp = new OrdersAssigned();
+                    temp.CustomerID = (int)reader["CustomerID"];
+                    temp.OrderID = (int)reader["OrderID"];
+
+                    list.Add(temp);
+                }
+                reader.Close();
+
+                for (int i = 0; i < list.Count; i++)
+                {
+                    query = "SELECT Name FROM Customers WHERE ID = @cid";
+                    SqlCommand cmd1 = new SqlCommand(query, con);
+                    cmd1.Parameters.AddWithValue("@cid", list.ElementAt(i).CustomerID);
+                    String CustomerName = cmd1.ExecuteScalar().ToString();
+                    list.ElementAt(i).CustomerName = CustomerName;
+                }
+                for (int i = 0; i < list.Count; i++)
+                {
+                    query = "SELECT OrderName FROM Orders WHERE ID = @oid";
+                    SqlCommand cmd2 = new SqlCommand(query, con);
+                    cmd2.Parameters.AddWithValue("@oid", list.ElementAt(i).OrderID);
+                    String OrderName = cmd2.ExecuteScalar().ToString();
+                    list.ElementAt(i).OrderName = OrderName;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return list;
+        }
+
         public string AssingToWorker(Customer selectedCustomer, Worker selectedWorker, string orderName, int price, DateTime date)
         {
             SqlConnection con = new SqlConnection(HelperDB.ConnectionString);

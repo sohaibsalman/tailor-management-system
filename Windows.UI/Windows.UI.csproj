@@ -94,6 +94,12 @@
     <Compile Include="FormDeleteRecord.Designer.cs">
       <DependentUpon>FormDeleteRecord.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFinishOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFinishOrder.Designer.cs">
+      <DependentUpon>FormFinishOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDeleteRecord.resx">
       <DependentUpon>FormDeleteRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFinishOrder.resx">
+      <DependentUpon>FormFinishOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

@@ -94,12 +94,18 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(522, 26);
             this.txtSearch.TabIndex = 1;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // tableData
             // 
+            this.tableData.AllowUserToAddRows = false;
+            this.tableData.AllowUserToDeleteRows = false;
+            this.tableData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tableData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableData.Location = new System.Drawing.Point(18, 80);
             this.tableData.Name = "tableData";
+            this.tableData.ReadOnly = true;
+            this.tableData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tableData.Size = new System.Drawing.Size(833, 340);
             this.tableData.TabIndex = 2;
             // 
@@ -116,6 +122,7 @@
             this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnFinish
             // 
@@ -130,6 +137,7 @@
             this.btnFinish.TabIndex = 3;
             this.btnFinish.Text = "Finish";
             this.btnFinish.UseVisualStyleBackColor = false;
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
             // 
             // FormFinishOrder
             // 
@@ -143,6 +151,7 @@
             this.Name = "FormFinishOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tailor Management System - Finish Order";
+            this.Load += new System.EventHandler(this.FormFinishOrder_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

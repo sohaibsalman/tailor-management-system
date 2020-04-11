@@ -101,5 +101,10 @@ namespace Windows.UI
         {
             new FormSearchUser().ShowDialog();
         }
+
+        private void checkWorkStatusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FormFinishOrder().ShowDialog();
+        }
     }
 }
