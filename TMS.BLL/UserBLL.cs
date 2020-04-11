@@ -24,5 +24,10 @@ namespace TMS.BLL
         {
             return new UserDAL().DeleteUser(id);
         }
+
+        public string UpdateUser(User u)
+        {
+            return new UserDAL().UpdateUser(u);
+        }
     }
 }

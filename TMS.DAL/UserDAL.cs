@@ -52,6 +52,41 @@ namespace TMS.DAL
             return users;
         }
 
+        public string UpdateUser(User u)
+        {
+            String msg = "";
+            SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+
+            try
+            {
+                con.Open();
+                String query = "UPDATE Users SET Name = @name, Password = @password, IsActive = @active, IsAdmin = @admin WHERE ID = @id";
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                cmd.Parameters.AddWithValue("@name", u.Name);
+                cmd.Parameters.AddWithValue("@password", u.Password);
+                cmd.Parameters.AddWithValue("@active", Convert.ToInt32(u.IsActive));
+                cmd.Parameters.AddWithValue("@admin", Convert.ToInt32(u.IsAdmin));
+                cmd.Parameters.AddWithValue("@id", u.ID);
+
+                int res = cmd.ExecuteNonQuery();
+                if(res < 0)
+                {
+                    msg = "error";
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return msg;
+        }
+
         public string DeleteUser(int id)
         {
             SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
