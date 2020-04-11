@@ -55,11 +55,6 @@
             this.workersStatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.totalEarningsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sideBar = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnExit = new System.Windows.Forms.Button();
@@ -70,39 +65,44 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.userToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.sideBar.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -158,7 +158,7 @@
             // createUserToolStripMenuItem
             // 
             this.createUserToolStripMenuItem.Name = "createUserToolStripMenuItem";
-            this.createUserToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.createUserToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
             this.createUserToolStripMenuItem.Text = "Create User";
             this.createUserToolStripMenuItem.Click += new System.EventHandler(this.createUserToolStripMenuItem_Click);
             // 
@@ -168,7 +168,7 @@
             this.userToolStripMenuItem,
             this.customerToolStripMenuItem});
             this.addWorkerToolStripMenuItem.Name = "addWorkerToolStripMenuItem";
-            this.addWorkerToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.addWorkerToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
             this.addWorkerToolStripMenuItem.Text = "Add";
             // 
             // userToolStripMenuItem
@@ -192,7 +192,7 @@
             this.customerToolStripMenuItem1,
             this.userToolStripMenuItem2});
             this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
-            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
             this.addCustomerToolStripMenuItem.Text = "Update";
             // 
             // userToolStripMenuItem1
@@ -219,7 +219,7 @@
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -267,12 +267,14 @@
             this.workerToolStripMenuItem1.Name = "workerToolStripMenuItem1";
             this.workerToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
             this.workerToolStripMenuItem1.Text = "Customer";
+            this.workerToolStripMenuItem1.Click += new System.EventHandler(this.workerToolStripMenuItem1_Click);
             // 
             // customerToolStripMenuItem3
             // 
             this.customerToolStripMenuItem3.Name = "customerToolStripMenuItem3";
             this.customerToolStripMenuItem3.Size = new System.Drawing.Size(152, 24);
             this.customerToolStripMenuItem3.Text = "Worker";
+            this.customerToolStripMenuItem3.Click += new System.EventHandler(this.customerToolStripMenuItem3_Click);
             // 
             // reportsToolStripMenuItem1
             // 
@@ -330,66 +332,6 @@
             this.sideBar.Name = "sideBar";
             this.sideBar.Size = new System.Drawing.Size(268, 664);
             this.sideBar.TabIndex = 1;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(74)))), ((int)(((byte)(114)))));
-            this.pictureBox6.Image = global::Windows.UI.Properties.Resources.close_window_20px;
-            this.pictureBox6.ImageLocation = "";
-            this.pictureBox6.Location = new System.Drawing.Point(56, 499);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(31, 32);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(74)))), ((int)(((byte)(114)))));
-            this.pictureBox5.Image = global::Windows.UI.Properties.Resources.logout_rounded_left_30px;
-            this.pictureBox5.ImageLocation = "";
-            this.pictureBox5.Location = new System.Drawing.Point(56, 441);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(31, 32);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 9;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(74)))), ((int)(((byte)(114)))));
-            this.pictureBox4.Image = global::Windows.UI.Properties.Resources.combo_chart_30px;
-            this.pictureBox4.ImageLocation = "";
-            this.pictureBox4.Location = new System.Drawing.Point(56, 383);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(31, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(74)))), ((int)(((byte)(114)))));
-            this.pictureBox3.Image = global::Windows.UI.Properties.Resources.staff_30px;
-            this.pictureBox3.ImageLocation = "";
-            this.pictureBox3.Location = new System.Drawing.Point(56, 326);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(31, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(74)))), ((int)(((byte)(114)))));
-            this.pictureBox2.Image = global::Windows.UI.Properties.Resources.settings_30px;
-            this.pictureBox2.ImageLocation = "";
-            this.pictureBox2.Location = new System.Drawing.Point(56, 269);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
             // 
             // panel2
             // 
@@ -541,15 +483,6 @@
             this.lblUsername.TabIndex = 10;
             this.lblUsername.Text = "label1";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Windows.UI.Properties.Resources.system_administrator_male_127px;
-            this.pictureBox1.Location = new System.Drawing.Point(72, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 126);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label3);
@@ -607,16 +540,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "10";
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Windows.UI.Properties.Resources.customers_png_7;
-            this.pictureBox7.Location = new System.Drawing.Point(228, 0);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(325, 189);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 1;
-            this.pictureBox7.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -663,16 +586,6 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Workers";
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Windows.UI.Properties.Resources.customers;
-            this.pictureBox8.Location = new System.Drawing.Point(194, 0);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(208, 189);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 4;
-            this.pictureBox8.TabStop = false;
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
@@ -685,16 +598,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(976, 353);
             this.panel6.TabIndex = 5;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::Windows.UI.Properties.Resources._204_2040974_inventory_management_survey_icon_image_png;
-            this.pictureBox9.Location = new System.Drawing.Point(683, 36);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(259, 284);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 3;
-            this.pictureBox9.TabStop = false;
             // 
             // label7
             // 
@@ -712,6 +615,106 @@
             this.userToolStripMenuItem3.Name = "userToolStripMenuItem3";
             this.userToolStripMenuItem3.Size = new System.Drawing.Size(152, 24);
             this.userToolStripMenuItem3.Text = "User";
+            this.userToolStripMenuItem3.Click += new System.EventHandler(this.userToolStripMenuItem3_Click);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Windows.UI.Properties.Resources._204_2040974_inventory_management_survey_icon_image_png;
+            this.pictureBox9.Location = new System.Drawing.Point(683, 36);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(259, 284);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 3;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Windows.UI.Properties.Resources.customers;
+            this.pictureBox8.Location = new System.Drawing.Point(194, 0);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(208, 189);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 4;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Windows.UI.Properties.Resources.customers_png_7;
+            this.pictureBox7.Location = new System.Drawing.Point(228, 0);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(325, 189);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 1;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(74)))), ((int)(((byte)(114)))));
+            this.pictureBox6.Image = global::Windows.UI.Properties.Resources.close_window_20px;
+            this.pictureBox6.ImageLocation = "";
+            this.pictureBox6.Location = new System.Drawing.Point(56, 499);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(31, 32);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(74)))), ((int)(((byte)(114)))));
+            this.pictureBox5.Image = global::Windows.UI.Properties.Resources.logout_rounded_left_30px;
+            this.pictureBox5.ImageLocation = "";
+            this.pictureBox5.Location = new System.Drawing.Point(56, 441);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(31, 32);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 9;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(74)))), ((int)(((byte)(114)))));
+            this.pictureBox4.Image = global::Windows.UI.Properties.Resources.combo_chart_30px;
+            this.pictureBox4.ImageLocation = "";
+            this.pictureBox4.Location = new System.Drawing.Point(56, 383);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(31, 32);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(74)))), ((int)(((byte)(114)))));
+            this.pictureBox3.Image = global::Windows.UI.Properties.Resources.staff_30px;
+            this.pictureBox3.ImageLocation = "";
+            this.pictureBox3.Location = new System.Drawing.Point(56, 326);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(31, 32);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(74)))), ((int)(((byte)(114)))));
+            this.pictureBox2.Image = global::Windows.UI.Properties.Resources.settings_30px;
+            this.pictureBox2.ImageLocation = "";
+            this.pictureBox2.Location = new System.Drawing.Point(56, 269);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(31, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Windows.UI.Properties.Resources.system_administrator_male_127px;
+            this.pictureBox1.Location = new System.Drawing.Point(72, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 126);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // FormDashboard
             // 
@@ -736,27 +739,27 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.sideBar.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

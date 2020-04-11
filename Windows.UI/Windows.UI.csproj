@@ -106,6 +106,24 @@
     <Compile Include="FormMeasurements.Designer.cs">
       <DependentUpon>FormMeasurements.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSearchCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearchCustomer.Designer.cs">
+      <DependentUpon>FormSearchCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSearchUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearchUser.Designer.cs">
+      <DependentUpon>FormSearchUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSearchWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearchWorker.Designer.cs">
+      <DependentUpon>FormSearchWorker.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUpdateCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +173,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMeasurements.resx">
       <DependentUpon>FormMeasurements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearchCustomer.resx">
+      <DependentUpon>FormSearchCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearchUser.resx">
+      <DependentUpon>FormSearchUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearchWorker.resx">
+      <DependentUpon>FormSearchWorker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateCustomer.resx">
       <DependentUpon>FormUpdateCustomer.cs</DependentUpon>

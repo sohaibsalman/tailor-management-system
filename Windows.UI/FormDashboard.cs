@@ -86,5 +86,20 @@ namespace Windows.UI
         {
             new FormDeleteRecord().ShowDialog();
         }
+
+        private void workerToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new FormSearchCustomer().ShowDialog();
+        }
+
+        private void customerToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            new FormSearchWorker().ShowDialog();
+        }
+
+        private void userToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            new FormSearchUser().ShowDialog();
+        }
     }
 }
