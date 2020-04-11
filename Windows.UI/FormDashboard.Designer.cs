@@ -45,7 +45,6 @@
             this.assignmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.assignWorkToWorkerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkWorkStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.finishOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.customerToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -227,8 +226,7 @@
             // 
             this.assignmentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.assignWorkToWorkerToolStripMenuItem,
-            this.checkWorkStatusToolStripMenuItem,
-            this.finishOrderToolStripMenuItem});
+            this.checkWorkStatusToolStripMenuItem});
             this.assignmentToolStripMenuItem.Name = "assignmentToolStripMenuItem";
             this.assignmentToolStripMenuItem.Size = new System.Drawing.Size(93, 23);
             this.assignmentToolStripMenuItem.Text = "Assignment";
@@ -244,13 +242,7 @@
             // 
             this.checkWorkStatusToolStripMenuItem.Name = "checkWorkStatusToolStripMenuItem";
             this.checkWorkStatusToolStripMenuItem.Size = new System.Drawing.Size(219, 24);
-            this.checkWorkStatusToolStripMenuItem.Text = "Check Work Status";
-            // 
-            // finishOrderToolStripMenuItem
-            // 
-            this.finishOrderToolStripMenuItem.Name = "finishOrderToolStripMenuItem";
-            this.finishOrderToolStripMenuItem.Size = new System.Drawing.Size(219, 24);
-            this.finishOrderToolStripMenuItem.Text = "Finish Order";
+            this.checkWorkStatusToolStripMenuItem.Text = "Finish Order";
             // 
             // reportsToolStripMenuItem
             // 
@@ -815,7 +807,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ToolStripMenuItem finishOrderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem workerToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem customerToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem1;
