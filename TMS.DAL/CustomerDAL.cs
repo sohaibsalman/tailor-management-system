@@ -97,6 +97,39 @@ namespace TMS.DAL
             return "";
         }
 
+        public bool UpdateCustomer(Customer c)
+        {
+            bool flag = true;
+            SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+
+            try
+            {
+                con.Open();
+                String query = "UPDATE Customers SET Name = @name, CNIC = @cnic, ContactNumber = @number, Address = @address WHERE ID = @id";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@name", c.Name);
+                cmd.Parameters.AddWithValue("@cnic", c.CNIC);
+                cmd.Parameters.AddWithValue("@number", c.ContactNumber);
+                cmd.Parameters.AddWithValue("@address", c.Address);
+                cmd.Parameters.AddWithValue("@id", c.ID);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res < 0)
+                    flag = false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return flag;
+        }
+
         public string DeleteCustomer(int id)
         {
             String msg = "";

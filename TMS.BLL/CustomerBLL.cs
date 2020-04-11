@@ -24,5 +24,10 @@ namespace TMS.BLL
         {
             return new CustomerDAL().DeleteCustomer(id);
         }
+
+        public bool UpdateCustomer(Customer c)
+        {
+            return new CustomerDAL().UpdateCustomer(c);
+        }
     }
 }
