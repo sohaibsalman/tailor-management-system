@@ -46,6 +46,39 @@ namespace TMS.DAL
             return msg;
         }
 
+        public bool UpdateWorker(Worker w)
+        {
+            bool flag = true;
+            SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+
+            try
+            {
+                con.Open();
+                String query = "UPDATE Workers SET Name = @name, Address = @address, ContactNumber = @number, Salary = @salary WHERE ID = @id";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@name", w.Name);
+                cmd.Parameters.AddWithValue("@address", w.Address);
+                cmd.Parameters.AddWithValue("@number", w.ContactNumber);
+                cmd.Parameters.AddWithValue("@salary", w.Salary);
+                cmd.Parameters.AddWithValue("@id", w.ID);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res < 0)
+                    flag = false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return flag;
+        }
+
         public string DeleteWorker(int id)
         {
             SqlConnection con = new SqlConnection(HelperDB.ConnectionString);

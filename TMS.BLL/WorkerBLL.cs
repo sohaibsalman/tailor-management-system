@@ -30,5 +30,10 @@ namespace TMS.BLL
         {
             return new WorkerDAL().DeleteWorker(id);
         }
+
+        public bool UpdateWorker(Worker w)
+        {
+            return new WorkerDAL().UpdateWorker(w);
+        }
     }
 }
