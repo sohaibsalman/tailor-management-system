@@ -34,11 +34,13 @@ namespace Windows.UI
             }
             else if(deleteRecordType.Trim().ToLower() == "user")
             {
-
+                List<User> userList = new UserBLL().GetAllUsers();
+                tableData.DataSource = userList;
             }
             else if(deleteRecordType.Trim().ToLower() == "customer")
             {
-
+                List<Customer> customerList = new CustomerBLL().GetAllCustomers();
+                tableData.DataSource = customerList;
             }
         }
     }

@@ -49,6 +49,7 @@
             // 
             this.tableData.AllowUserToAddRows = false;
             this.tableData.AllowUserToDeleteRows = false;
+            this.tableData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tableData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableData.Location = new System.Drawing.Point(16, 80);
             this.tableData.Name = "tableData";
