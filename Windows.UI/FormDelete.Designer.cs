@@ -39,7 +39,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 43);
+            this.label1.Location = new System.Drawing.Point(21, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(179, 20);
             this.label1.TabIndex = 0;
@@ -51,11 +51,11 @@
             this.tableData.AllowUserToDeleteRows = false;
             this.tableData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tableData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableData.Location = new System.Drawing.Point(16, 80);
+            this.tableData.Location = new System.Drawing.Point(25, 80);
             this.tableData.Name = "tableData";
             this.tableData.ReadOnly = true;
             this.tableData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tableData.Size = new System.Drawing.Size(816, 391);
+            this.tableData.Size = new System.Drawing.Size(807, 391);
             this.tableData.TabIndex = 1;
             // 
             // btnClose
@@ -86,6 +86,7 @@
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // FormDelete
             // 

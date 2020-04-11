@@ -43,5 +43,38 @@ namespace Windows.UI
                 tableData.DataSource = customerList;
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int selectedRow = tableData.CurrentCell.RowIndex;
+            String msg = "";
+
+            int id;
+            DataGridViewRow row = tableData.Rows[selectedRow];
+            id = (int)row.Cells[0].Value;
+
+            if (deleteRecordType.Trim().ToLower() == "worker")
+            {
+                msg = new WorkerBLL().DeleteWorker(id);
+            }
+            else if (deleteRecordType.Trim().ToLower() == "user")
+            {
+                msg = new UserBLL().DeleteUser(id);
+            }
+            else if (deleteRecordType.Trim().ToLower() == "customer")
+            {
+                
+            }
+
+            if(msg.Trim().ToLower() == "error")
+            {
+                MessageBox.Show("Error Deleting Selected Data", "Error");
+            }
+            else
+            {
+                MessageBox.Show("Data Deleted Succussfuly", "Success");
+            }
+            FormDelete_Load(sender, e);
+        }
     }
 }

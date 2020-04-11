@@ -25,5 +25,10 @@ namespace TMS.BLL
         {
             return new WorkerDAL().GetWorkersStats(workerList);
         }
+
+        public string DeleteWorker(int id)
+        {
+            return new WorkerDAL().DeleteWorker(id);
+        }
     }
 }

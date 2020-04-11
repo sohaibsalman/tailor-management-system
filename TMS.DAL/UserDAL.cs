@@ -52,6 +52,34 @@ namespace TMS.DAL
             return users;
         }
 
+        public string DeleteUser(int id)
+        {
+            SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+
+            try
+            {
+                con.Open();
+                String query = "DELETE FROM Users WHERE ID = @id";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res < 0)
+                    return "error";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return "";
+        }
+
         public string CreateUser(User u)
         {
             String msg = "";

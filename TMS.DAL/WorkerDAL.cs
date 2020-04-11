@@ -46,6 +46,33 @@ namespace TMS.DAL
             return msg;
         }
 
+        public string DeleteWorker(int id)
+        {
+            SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+
+            try
+            {
+                con.Open();
+                String query = "DELETE FROM Workers WHERE ID = @id";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res < 0)
+                    return "error";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return "";
+        }
+
         public DataTable GetWorkersStats(List<Worker> workerList)
         {
             DataTable dt = new DataTable();

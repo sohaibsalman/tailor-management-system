@@ -19,5 +19,10 @@ namespace TMS.BLL
         {
             return new UserDAL().CreateUser(user);
         }
+
+        public string DeleteUser(int id)
+        {
+            return new UserDAL().DeleteUser(id);
+        }
     }
 }
