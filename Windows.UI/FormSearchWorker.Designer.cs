@@ -55,6 +55,7 @@
             // 
             // tableSearchRecord
             // 
+            this.tableSearchRecord.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tableSearchRecord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableSearchRecord.Location = new System.Drawing.Point(26, 76);
             this.tableSearchRecord.Name = "tableSearchRecord";
@@ -63,6 +64,7 @@
             // 
             // btnClose
             // 
+            this.btnClose.AutoSize = true;
             this.btnClose.BackColor = System.Drawing.Color.Firebrick;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

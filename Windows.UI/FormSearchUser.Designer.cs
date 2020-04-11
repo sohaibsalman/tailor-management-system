@@ -42,6 +42,7 @@
             this.txtSearchUser.Name = "txtSearchUser";
             this.txtSearchUser.Size = new System.Drawing.Size(408, 26);
             this.txtSearchUser.TabIndex = 0;
+            this.txtSearchUser.TextChanged += new System.EventHandler(this.txtSearchUser_TextChanged);
             // 
             // label1
             // 
@@ -55,6 +56,7 @@
             // 
             // tableSearchRecord
             // 
+            this.tableSearchRecord.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tableSearchRecord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableSearchRecord.Location = new System.Drawing.Point(26, 76);
             this.tableSearchRecord.Name = "tableSearchRecord";
@@ -89,6 +91,7 @@
             this.Name = "FormSearchUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tailor Management System - Search User";
+            this.Load += new System.EventHandler(this.FormSearchUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tableSearchRecord)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
