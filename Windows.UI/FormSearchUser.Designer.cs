@@ -56,12 +56,17 @@
             // 
             // tableSearchRecord
             // 
+            this.tableSearchRecord.AllowUserToAddRows = false;
+            this.tableSearchRecord.AllowUserToDeleteRows = false;
             this.tableSearchRecord.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tableSearchRecord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableSearchRecord.Location = new System.Drawing.Point(26, 76);
             this.tableSearchRecord.Name = "tableSearchRecord";
+            this.tableSearchRecord.ReadOnly = true;
+            this.tableSearchRecord.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tableSearchRecord.Size = new System.Drawing.Size(797, 405);
             this.tableSearchRecord.TabIndex = 1;
+            this.tableSearchRecord.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.tableSearchRecord_MouseDoubleClick);
             // 
             // btnClose
             // 

@@ -43,5 +43,27 @@ namespace Windows.UI
         {
             tableSearchRecord.DataSource = userList;
         }
+
+        private void tableSearchRecord_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int index = tableSearchRecord.CurrentCell.RowIndex;
+            if(index >= 0)
+            {
+                User u = new User();
+                DataGridViewRow row = tableSearchRecord.Rows[index];
+
+                u.ID = (int)row.Cells[0].Value;
+                u.Name = row.Cells[1].Value.ToString();
+                u.Username = row.Cells[2].Value.ToString();
+                u.Password = row.Cells[3].Value.ToString();
+                u.RegistrationDate = Convert.ToDateTime(row.Cells[4].Value.ToString());
+                u.LastLogin = Convert.ToDateTime(row.Cells[5].Value.ToString());
+                u.IsActive = Convert.ToBoolean(row.Cells[6].Value.ToString());
+                u.IsAdmin = Convert.ToBoolean(row.Cells[7].Value.ToString());
+
+                FormUpdateUser.updatedUser = u;
+                this.Close();
+            }
+        }
     }
 }
