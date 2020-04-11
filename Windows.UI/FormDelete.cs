@@ -63,7 +63,7 @@ namespace Windows.UI
             }
             else if (deleteRecordType.Trim().ToLower() == "customer")
             {
-                
+                msg = new CustomerBLL().DeleteCustomer(id);
             }
 
             if(msg.Trim().ToLower() == "error")

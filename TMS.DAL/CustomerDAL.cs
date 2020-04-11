@@ -97,6 +97,35 @@ namespace TMS.DAL
             return "";
         }
 
+        public string DeleteCustomer(int id)
+        {
+            String msg = "";
+            SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+
+            try
+            {
+                con.Open();
+                String query = "DELETE FROM Customers WHERE ID = @id";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res < 0)
+                    msg = "error";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return msg;
+        }
+
         public List<Customer> GellAllCustomers()
         {
             SqlConnection con = new SqlConnection(HelperDB.ConnectionString);

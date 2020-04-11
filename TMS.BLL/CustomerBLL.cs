@@ -19,5 +19,10 @@ namespace TMS.BLL
         {
             return new CustomerDAL().GellAllCustomers();
         }
+
+        public string DeleteCustomer(int id)
+        {
+            return new CustomerDAL().DeleteCustomer(id);
+        }
     }
 }
