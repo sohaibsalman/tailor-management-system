@@ -47,34 +47,43 @@ namespace Windows.UI
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int selectedRow = tableData.CurrentCell.RowIndex;
-            String msg = "";
 
-            int id;
-            DataGridViewRow row = tableData.Rows[selectedRow];
-            id = (int)row.Cells[0].Value;
+            if(selectedRow >= 0)
+            {
+                String msg = "";
 
-            if (deleteRecordType.Trim().ToLower() == "worker")
-            {
-                msg = new WorkerBLL().DeleteWorker(id);
-            }
-            else if (deleteRecordType.Trim().ToLower() == "user")
-            {
-                msg = new UserBLL().DeleteUser(id);
-            }
-            else if (deleteRecordType.Trim().ToLower() == "customer")
-            {
-                msg = new CustomerBLL().DeleteCustomer(id);
-            }
+                int id;
+                DataGridViewRow row = tableData.Rows[selectedRow];
 
-            if(msg.Trim().ToLower() == "error")
-            {
-                MessageBox.Show("Error Deleting Selected Data", "Error");
+                id = (int)row.Cells[0].Value;
+
+                if (deleteRecordType.Trim().ToLower() == "worker")
+                {
+                    msg = new WorkerBLL().DeleteWorker(id);
+                }
+                else if (deleteRecordType.Trim().ToLower() == "user")
+                {
+                    msg = new UserBLL().DeleteUser(id);
+                }
+                else if (deleteRecordType.Trim().ToLower() == "customer")
+                {
+                    msg = new CustomerBLL().DeleteCustomer(id);
+                }
+
+                if (msg.Trim().ToLower() == "error")
+                {
+                    MessageBox.Show("Error Deleting Selected Data", "Error");
+                }
+                else
+                {
+                    MessageBox.Show("Data Deleted Succussfuly", "Success");
+                }
+                FormDelete_Load(sender, e);
             }
             else
             {
-                MessageBox.Show("Data Deleted Succussfuly", "Success");
+                MessageBox.Show("Please Select a Row first", "Error");
             }
-            FormDelete_Load(sender, e);
         }
     }
 }

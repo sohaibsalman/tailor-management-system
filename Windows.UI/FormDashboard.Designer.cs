@@ -41,6 +41,7 @@
             this.userToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.customerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.userToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.assignmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.assignWorkToWorkerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkWorkStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,7 +85,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.sideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -215,6 +216,13 @@
             this.userToolStripMenuItem2.Text = "User";
             this.userToolStripMenuItem2.Click += new System.EventHandler(this.userToolStripMenuItem2_Click);
             // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
             // assignmentToolStripMenuItem
             // 
             this.assignmentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -248,7 +256,8 @@
             // 
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.workerToolStripMenuItem1,
-            this.customerToolStripMenuItem3});
+            this.customerToolStripMenuItem3,
+            this.userToolStripMenuItem3});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(61, 23);
             this.reportsToolStripMenuItem.Text = "Search";
@@ -256,13 +265,13 @@
             // workerToolStripMenuItem1
             // 
             this.workerToolStripMenuItem1.Name = "workerToolStripMenuItem1";
-            this.workerToolStripMenuItem1.Size = new System.Drawing.Size(138, 24);
+            this.workerToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
             this.workerToolStripMenuItem1.Text = "Customer";
             // 
             // customerToolStripMenuItem3
             // 
             this.customerToolStripMenuItem3.Name = "customerToolStripMenuItem3";
-            this.customerToolStripMenuItem3.Size = new System.Drawing.Size(138, 24);
+            this.customerToolStripMenuItem3.Size = new System.Drawing.Size(152, 24);
             this.customerToolStripMenuItem3.Text = "Worker";
             // 
             // reportsToolStripMenuItem1
@@ -698,12 +707,11 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "10";
             // 
-            // deleteToolStripMenuItem
+            // userToolStripMenuItem3
             // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            this.userToolStripMenuItem3.Name = "userToolStripMenuItem3";
+            this.userToolStripMenuItem3.Size = new System.Drawing.Size(152, 24);
+            this.userToolStripMenuItem3.Text = "User";
             // 
             // FormDashboard
             // 
@@ -813,5 +821,6 @@
         private System.Windows.Forms.ToolStripMenuItem workersStatsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem totalEarningsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem userToolStripMenuItem3;
     }
 }
