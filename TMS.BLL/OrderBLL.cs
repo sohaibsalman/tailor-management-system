@@ -25,6 +25,16 @@ namespace TMS.BLL
             return new OrderDAL().GetCompletedOrders();
         }
 
+        public int GetEarningsOfCompletedOrders()
+        {
+            return new OrderDAL().GetEarningsOfCompletedOrders();
+        }
+
+        public int GetEarningsOfPendingOrders()
+        {
+            return new OrderDAL().GetEarningsOfPendingOrders();
+        }
+
         public List<OrdersAssigned> GetPendingOrders()
         {
             return new OrderDAL().GetPendingOrders();

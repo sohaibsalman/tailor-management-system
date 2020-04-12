@@ -121,5 +121,10 @@ namespace Windows.UI
         {
             new FormWorkerStats().ShowDialog();
         }
+
+        private void totalEarningsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FormTotalEarnings().ShowDialog();
+        }
     }
 }

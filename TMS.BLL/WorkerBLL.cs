@@ -35,5 +35,10 @@ namespace TMS.BLL
         {
             return new WorkerDAL().UpdateWorker(w);
         }
+
+        public int GetSalaryOfWorkers()
+        {
+            return new WorkerDAL().GetSalaryOfWorkers();
+        }
     }
 }

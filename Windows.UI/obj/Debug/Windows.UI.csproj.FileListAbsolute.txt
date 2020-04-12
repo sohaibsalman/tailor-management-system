@@ -32,3 +32,4 @@ D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\Wi
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\Windows.UI\obj\Debug\Windows.UI.FormPendingOrders.resources
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\Windows.UI\obj\Debug\Windows.UI.FormOrdersCompleted.resources
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\Windows.UI\obj\Debug\Windows.UI.FormWorkerStats.resources
+D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\Windows.UI\obj\Debug\Windows.UI.FormTotalEarnings.resources

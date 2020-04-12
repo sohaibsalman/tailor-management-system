@@ -38,6 +38,58 @@ namespace TMS.DAL
             }
         }
 
+        public int GetEarningsOfPendingOrders()
+        {
+            int sum = -1;
+
+            SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+
+            try
+            {
+                con.Open();
+                String query = "SELECT SUM(Price) FROM OrdersAssigned WHERE Status = 0";
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                sum = (int)cmd.ExecuteScalar();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return sum;
+        }
+
+        public int GetEarningsOfCompletedOrders()
+        {
+            int sum = -1;
+
+            SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+
+            try
+            {
+                con.Open();
+                String query = "SELECT SUM(Price) FROM OrdersAssigned WHERE Status = 1";
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                sum = (int)cmd.ExecuteScalar();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return sum;
+        }
+
         public List<OrdersAssigned> GetCompletedOrders()
         {
             List<OrdersAssigned> list = new List<OrdersAssigned>();

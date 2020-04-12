@@ -142,6 +142,12 @@
     <Compile Include="FormSearchWorker.Designer.cs">
       <DependentUpon>FormSearchWorker.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTotalEarnings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTotalEarnings.Designer.cs">
+      <DependentUpon>FormTotalEarnings.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUpdateCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSearchWorker.resx">
       <DependentUpon>FormSearchWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTotalEarnings.resx">
+      <DependentUpon>FormTotalEarnings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateCustomer.resx">
       <DependentUpon>FormUpdateCustomer.cs</DependentUpon>

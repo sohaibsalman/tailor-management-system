@@ -46,6 +46,33 @@ namespace TMS.DAL
             return msg;
         }
 
+        public int GetSalaryOfWorkers()
+        {
+            int sum = -1;
+
+            SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+
+            try
+            {
+                con.Open();
+                String query = "SELECT SUM(Salary) FROM Workers";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                sum = (int)cmd.ExecuteScalar();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return sum;
+        }
+
         public bool UpdateWorker(Worker w)
         {
             bool flag = true;
