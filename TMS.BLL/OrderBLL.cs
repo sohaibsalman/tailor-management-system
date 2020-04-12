@@ -44,5 +44,10 @@ namespace TMS.BLL
         {
             return new OrderDAL().FinishOrder(orderID);
         }
+
+        public List<Order> GetAllOrders()
+        {
+            return new OrderDAL().GetAllOrders();
+        }
     }
 }

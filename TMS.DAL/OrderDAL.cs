@@ -64,6 +64,42 @@ namespace TMS.DAL
             return sum;
         }
 
+        public List<Order> GetAllOrders()
+        {
+            List<Order> list = new List<Order>();
+            SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+
+            try
+            {
+                con.Open();
+                String query = "SELECT * FROM Orders";
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    Order o = new Order();
+                    o.CustomerID = (int)reader["CustomerID"];
+                    o.ID = (int)reader["ID"];
+                    o.OrderName = reader["OrderName"].ToString();
+                    o.Status = Convert.ToBoolean(reader["Status"]);
+
+                    list.Add(o);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return list;
+        }
+
         public int GetEarningsOfCompletedOrders()
         {
             int sum = -1;

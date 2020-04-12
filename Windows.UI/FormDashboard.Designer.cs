@@ -76,15 +76,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblOrders = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblWorkers = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCustomers = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.sideBar.SuspendLayout();
@@ -596,7 +596,7 @@
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(84)))), ((int)(((byte)(124)))));
             this.panel6.Controls.Add(this.pictureBox9);
-            this.panel6.Controls.Add(this.label7);
+            this.panel6.Controls.Add(this.lblOrders);
             this.panel6.Controls.Add(this.label1);
             this.panel6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel6.ForeColor = System.Drawing.Color.White;
@@ -615,16 +615,16 @@
             this.pictureBox9.TabIndex = 3;
             this.pictureBox9.TabStop = false;
             // 
-            // label7
+            // lblOrders
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(278, 133);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(170, 120);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "10";
+            this.lblOrders.AutoSize = true;
+            this.lblOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrders.ForeColor = System.Drawing.Color.White;
+            this.lblOrders.Location = new System.Drawing.Point(278, 133);
+            this.lblOrders.Name = "lblOrders";
+            this.lblOrders.Size = new System.Drawing.Size(170, 120);
+            this.lblOrders.TabIndex = 3;
+            this.lblOrders.Text = "10";
             // 
             // panel4
             // 
@@ -639,7 +639,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(84)))), ((int)(((byte)(124)))));
-            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.lblWorkers);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.pictureBox8);
             this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -649,16 +649,16 @@
             this.panel5.Size = new System.Drawing.Size(403, 189);
             this.panel5.TabIndex = 6;
             // 
-            // label5
+            // lblWorkers
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(18, 53);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(170, 120);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "10";
+            this.lblWorkers.AutoSize = true;
+            this.lblWorkers.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWorkers.ForeColor = System.Drawing.Color.White;
+            this.lblWorkers.Location = new System.Drawing.Point(18, 53);
+            this.lblWorkers.Name = "lblWorkers";
+            this.lblWorkers.Size = new System.Drawing.Size(170, 120);
+            this.lblWorkers.TabIndex = 3;
+            this.lblWorkers.Text = "10";
             // 
             // label4
             // 
@@ -685,7 +685,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(84)))), ((int)(((byte)(124)))));
             this.panel7.Controls.Add(this.label6);
-            this.panel7.Controls.Add(this.label2);
+            this.panel7.Controls.Add(this.lblCustomers);
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel7.ForeColor = System.Drawing.Color.White;
@@ -705,16 +705,16 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Customers";
             // 
-            // label2
+            // lblCustomers
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(38, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 120);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "10";
+            this.lblCustomers.AutoSize = true;
+            this.lblCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomers.ForeColor = System.Drawing.Color.White;
+            this.lblCustomers.Location = new System.Drawing.Point(38, 53);
+            this.lblCustomers.Name = "lblCustomers";
+            this.lblCustomers.Size = new System.Drawing.Size(170, 120);
+            this.lblCustomers.TabIndex = 3;
+            this.lblCustomers.Text = "10";
             // 
             // pictureBox7
             // 
@@ -817,7 +817,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblOrders;
         private System.Windows.Forms.ToolStripMenuItem workerToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem customerToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem1;
@@ -829,12 +829,12 @@
         private System.Windows.Forms.ToolStripMenuItem userToolStripMenuItem3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblWorkers;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCustomers;
         private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

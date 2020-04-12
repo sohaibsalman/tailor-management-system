@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TMS.BLL;
 
 namespace Windows.UI
 {
@@ -65,6 +66,22 @@ namespace Windows.UI
         private void FormDashboard_Load(object sender, EventArgs e)
         {
             lblUsername.Text = username;
+            String customers = new CustomerBLL().GetAllCustomers().Count.ToString();
+            String orders = new OrderBLL().GetAllOrders().Count.ToString();
+            String workers = new WorkerBLL().GetAllWorkers().Count.ToString();
+            if (customers.Length == 1)
+                lblCustomers.Text = "0" + customers;
+            else
+                lblCustomers.Text = customers;
+            if (orders.Length == 1)
+                lblOrders.Text = "0" + orders;
+            else
+                lblOrders.Text = orders;
+            if (workers.Length == 1)
+                lblWorkers.Text = "0" + workers;
+            else
+                lblWorkers.Text = workers;
+
         }
 
         private void userToolStripMenuItem1_Click(object sender, EventArgs e)
