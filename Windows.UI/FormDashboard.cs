@@ -106,5 +106,20 @@ namespace Windows.UI
         {
             new FormFinishOrder().ShowDialog();
         }
+
+        private void pendingOrdersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FormPendingOrders().ShowDialog();
+        }
+
+        private void ordersCompletedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FormOrdersCompleted().ShowDialog();
+        }
+
+        private void workersStatsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FormWorkerStats().ShowDialog();
+        }
     }
 }

@@ -26,13 +26,13 @@ namespace Windows.UI
 
         private void FormFinishOrder_Load(object sender, EventArgs e)
         {
-            List<OrdersAssigned> list = new OrderBLL().GetAllOrders();
+            List<OrdersAssigned> list = new OrderBLL().GetPendingOrders();
             tableData.DataSource = list;
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            List<OrdersAssigned> list = new OrderBLL().GetAllOrders();
+            List<OrdersAssigned> list = new OrderBLL().GetPendingOrders();
 
             if (txtSearch.Text.Trim() != "")
             {

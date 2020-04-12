@@ -112,6 +112,18 @@
     <Compile Include="FormMeasurements.Designer.cs">
       <DependentUpon>FormMeasurements.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormOrdersCompleted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrdersCompleted.Designer.cs">
+      <DependentUpon>FormOrdersCompleted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPendingOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPendingOrders.Designer.cs">
+      <DependentUpon>FormPendingOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSearchCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +160,12 @@
     <Compile Include="FormUpdateWorker.Designer.cs">
       <DependentUpon>FormUpdateWorker.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormWorkerStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWorkerStats.Designer.cs">
+      <DependentUpon>FormWorkerStats.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAddCustomer.resx">
@@ -183,6 +201,12 @@
     <EmbeddedResource Include="FormMeasurements.resx">
       <DependentUpon>FormMeasurements.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormOrdersCompleted.resx">
+      <DependentUpon>FormOrdersCompleted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPendingOrders.resx">
+      <DependentUpon>FormPendingOrders.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSearchCustomer.resx">
       <DependentUpon>FormSearchCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateWorker.resx">
       <DependentUpon>FormUpdateWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWorkerStats.resx">
+      <DependentUpon>FormWorkerStats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
