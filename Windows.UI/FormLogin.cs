@@ -41,6 +41,7 @@ namespace Windows.UI
                     this.Hide();
                     User u = (User)cbxUsername.SelectedValue;
                     FormDashboard.username = u.Username;
+                    FormDashboard.isAdmin = u.IsAdmin;
                     new FormDashboard().ShowDialog();
                     this.Close();
                 }

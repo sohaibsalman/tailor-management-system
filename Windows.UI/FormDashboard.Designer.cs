@@ -45,11 +45,11 @@
             this.assignmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.assignWorkToWorkerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkWorkStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.customerToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.userToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pendingOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordersCompletedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workersStatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -114,8 +114,8 @@
             this.fileToolStripMenuItem,
             this.setupToolStripMenuItem,
             this.assignmentToolStripMenuItem,
-            this.reportsToolStripMenuItem,
-            this.reportsToolStripMenuItem1});
+            this.searchToolStripMenuItem,
+            this.reportsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1287, 27);
@@ -159,7 +159,7 @@
             // createUserToolStripMenuItem
             // 
             this.createUserToolStripMenuItem.Name = "createUserToolStripMenuItem";
-            this.createUserToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
+            this.createUserToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.createUserToolStripMenuItem.Text = "Create User";
             this.createUserToolStripMenuItem.Click += new System.EventHandler(this.createUserToolStripMenuItem_Click);
             // 
@@ -169,7 +169,7 @@
             this.userToolStripMenuItem,
             this.customerToolStripMenuItem});
             this.addWorkerToolStripMenuItem.Name = "addWorkerToolStripMenuItem";
-            this.addWorkerToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
+            this.addWorkerToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.addWorkerToolStripMenuItem.Text = "Add";
             // 
             // userToolStripMenuItem
@@ -193,7 +193,7 @@
             this.customerToolStripMenuItem1,
             this.userToolStripMenuItem2});
             this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
-            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
+            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.addCustomerToolStripMenuItem.Text = "Update";
             // 
             // userToolStripMenuItem1
@@ -220,7 +220,7 @@
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -247,47 +247,47 @@
             this.checkWorkStatusToolStripMenuItem.Text = "Finish Order";
             this.checkWorkStatusToolStripMenuItem.Click += new System.EventHandler(this.checkWorkStatusToolStripMenuItem_Click);
             // 
-            // reportsToolStripMenuItem
+            // searchToolStripMenuItem
             // 
-            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.searchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.workerToolStripMenuItem1,
             this.customerToolStripMenuItem3,
             this.userToolStripMenuItem3});
-            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(61, 23);
-            this.reportsToolStripMenuItem.Text = "Search";
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(61, 23);
+            this.searchToolStripMenuItem.Text = "Search";
             // 
             // workerToolStripMenuItem1
             // 
             this.workerToolStripMenuItem1.Name = "workerToolStripMenuItem1";
-            this.workerToolStripMenuItem1.Size = new System.Drawing.Size(138, 24);
+            this.workerToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
             this.workerToolStripMenuItem1.Text = "Customer";
             this.workerToolStripMenuItem1.Click += new System.EventHandler(this.workerToolStripMenuItem1_Click);
             // 
             // customerToolStripMenuItem3
             // 
             this.customerToolStripMenuItem3.Name = "customerToolStripMenuItem3";
-            this.customerToolStripMenuItem3.Size = new System.Drawing.Size(138, 24);
+            this.customerToolStripMenuItem3.Size = new System.Drawing.Size(152, 24);
             this.customerToolStripMenuItem3.Text = "Worker";
             this.customerToolStripMenuItem3.Click += new System.EventHandler(this.customerToolStripMenuItem3_Click);
             // 
             // userToolStripMenuItem3
             // 
             this.userToolStripMenuItem3.Name = "userToolStripMenuItem3";
-            this.userToolStripMenuItem3.Size = new System.Drawing.Size(138, 24);
+            this.userToolStripMenuItem3.Size = new System.Drawing.Size(152, 24);
             this.userToolStripMenuItem3.Text = "User";
             this.userToolStripMenuItem3.Click += new System.EventHandler(this.userToolStripMenuItem3_Click);
             // 
-            // reportsToolStripMenuItem1
+            // reportsToolStripMenuItem
             // 
-            this.reportsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pendingOrdersToolStripMenuItem,
             this.ordersCompletedToolStripMenuItem,
             this.workersStatsToolStripMenuItem,
             this.totalEarningsToolStripMenuItem});
-            this.reportsToolStripMenuItem1.Name = "reportsToolStripMenuItem1";
-            this.reportsToolStripMenuItem1.Size = new System.Drawing.Size(68, 23);
-            this.reportsToolStripMenuItem1.Text = "Reports";
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(68, 23);
+            this.reportsToolStripMenuItem.Text = "Reports";
             // 
             // pendingOrdersToolStripMenuItem
             // 
@@ -794,7 +794,7 @@
         private System.Windows.Forms.ToolStripMenuItem assignmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem assignWorkToWorkerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkWorkStatusToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.Panel sideBar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnDashboard;
@@ -820,7 +820,7 @@
         private System.Windows.Forms.Label lblOrders;
         private System.Windows.Forms.ToolStripMenuItem workerToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem customerToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pendingOrdersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordersCompletedToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem workersStatsToolStripMenuItem;

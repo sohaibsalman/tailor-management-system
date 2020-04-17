@@ -14,6 +14,7 @@ namespace Windows.UI
     public partial class FormDashboard : Form
     {
         public static String username;
+        public static bool isAdmin;
         public FormDashboard()
         {
             InitializeComponent();
@@ -65,6 +66,15 @@ namespace Windows.UI
 
         private void FormDashboard_Load(object sender, EventArgs e)
         {
+            if(!isAdmin)
+            {
+                assignmentToolStripMenuItem.Visible = false;
+                reportsToolStripMenuItem.Visible = false;
+                createUserToolStripMenuItem.Visible = false;
+            }
+
+            deleteToolStripMenuItem.Enabled = false;
+
             lblUsername.Text = username;
             String customers = new CustomerBLL().GetAllCustomers().Count.ToString();
             String orders = new OrderBLL().GetAllOrders().Count.ToString();

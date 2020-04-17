@@ -17,7 +17,6 @@ namespace TMS.DAL
             {
                 con.Open();
 
-
                 String query = ("INSERT INTO [Orders] (CustomerID, OrderName, Status) VALUES (@cid, @ordername, @status)");
                 SqlCommand cmd = new SqlCommand(query, con);
 

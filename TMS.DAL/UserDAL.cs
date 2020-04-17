@@ -32,8 +32,8 @@ namespace TMS.DAL
                     u.Name = reader["Name"].ToString();
                     u.Username = reader["Username"].ToString();
                     u.Password = reader["Password"].ToString();
-                    u.IsActive = Convert.ToBoolean(reader["IsActive"]);
-                    u.IsAdmin = Convert.ToBoolean(reader["IsActive"]);
+                    u.IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive"));
+                    u.IsAdmin = reader.GetBoolean(reader.GetOrdinal("IsAdmin"));
                     u.RegistrationDate = Convert.ToDateTime(reader["RegistrationDate"]);
                     u.LastLogin = Convert.ToDateTime(reader["LastLogin"]);
                     //add to list
