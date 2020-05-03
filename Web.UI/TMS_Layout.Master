@@ -71,11 +71,11 @@
                 </header>
                 <ul class="sidebar-list">
                     <li class="active"><a href="Default.aspx"><i class="fas fa-home"></i>Home</a></li>
-                    <li><a href="FormSettings.aspx"><i class="fas fa-sliders-h"></i>Settings</a></li>
                     <li><a href="FormSetup.aspx">  <i class="fas fa-plus-square"></i>Setup</a></li>
                     <li><a href="FormAssignWork.aspx"><i class="fas fa-tasks"></i>Assign</a></li>
-                    <li><a href="FormSearch.aspx"><i class="fas fa-tasks"></i>Search</a></li>
+                    <li><a href="FormSearch.aspx"><i class="fas fa-search"></i>Search</a></li>
                     <li><a href="FormReports.aspx"><i class="fas fa-chart-line"></i>Reports</a></li>
+                    <li><a href="FormSettings.aspx"><i class="fas fa-sliders-h"></i>Settings</a></li>
                 </ul>
             </div>
         </aside>

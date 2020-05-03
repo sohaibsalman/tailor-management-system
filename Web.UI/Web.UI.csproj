@@ -186,6 +186,7 @@
     </Content>
     <Content Include="Default.aspx" />
     <Content Include="Fonts\font-awesome\css\all.min.css" />
+    <Content Include="FormAddCustomer.aspx" />
     <Content Include="FormAssignWork.aspx" />
     <Content Include="FormLogin.aspx" />
     <Content Include="FormReports.aspx" />
@@ -464,6 +465,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddCustomer.aspx.cs">
+      <DependentUpon>FormAddCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormAddCustomer.aspx.designer.cs">
+      <DependentUpon>FormAddCustomer.aspx</DependentUpon>
     </Compile>
     <Compile Include="FormAssignWork.aspx.cs">
       <DependentUpon>FormAssignWork.aspx</DependentUpon>

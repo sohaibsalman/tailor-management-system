@@ -12,9 +12,16 @@ namespace Web.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            User user = (User)Session["user"];
-            linkNavUser.Text = user.Name;
-            linkSideUser.Text = user.Name;
+            if(Session["user"] != null)
+            {
+                User user = (User)Session["user"];
+                linkNavUser.Text = user.Name;
+                linkSideUser.Text = user.Name;
+            }
+            else
+            {
+                Response.Redirect("~/FormLogin.aspx");
+            }      
         }
 
         protected void linkLogout_Click(object sender, EventArgs e)
