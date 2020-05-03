@@ -1,0 +1,237 @@
+﻿$color-dark-1: #0a0a0a;
+$color-dark-2: #121212;
+$color-dark-3: rgb(20,20,20);
+$color-dark-4: rgb(30,30,30);
+$color-dark-5: rgb(40,40,40);
+$color-blue-1: rgb(2, 76, 187);
+$gradient-1a: #4b6cb7;
+$gradient-1b: #182848;
+$gradient-2a: #f5af19;
+$gradient-2b: #f12711;
+$gradient-3a: #C04848;
+$gradient-3b: #480048;
+$gradient-4a: #71B280;
+$gradient-4b: #134E5E;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+//NAVBAR
+._navbar {
+    position: sticky;
+    top: 0;
+    background-color: $color-dark-1;
+    padding: 10px;
+    text-align: center;
+    z-index: 100;
+
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    div, form {
+        display: inline;
+    }
+
+    div {
+        padding: 10px;
+    }
+
+    .nav-logo a {
+        color: white;
+        text-decoration: none;
+        padding-left: 10px;
+
+        h5 {
+            display: inline;
+        }
+    }
+
+    .nav-search {
+        input {
+            background-color: $color-dark-2;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 500px;
+            color: white;
+
+            &:focus {
+                border: none;
+                outline: none;
+            }
+        }
+
+        i {
+            color: white;
+            padding: 14px;
+            background-color: black;
+            border-radius: 50%;
+            margin-left: -45px;
+            cursor: pointer;
+        }
+    }
+
+    .nav-dropdowns {
+        color: white;
+        cursor: pointer;
+
+        i {
+            border-radius: 50%;
+            background-color: black;
+            margin-right: 10px;
+            padding: 14px;
+        }
+    }
+
+    .vertical-line {
+        height: 100%;
+        width: 10px;
+        padding: .5px;
+        background-color: white;
+        margin: 0 10px;
+    }
+
+    .account {
+        position: relative;
+        cursor: pointer;
+        .nav-pic {
+            width: 40px;
+        }
+
+        h6 {
+            display: inline;
+            padding: 0 10px;
+            color: white;
+        }
+
+        a {
+            color: rgb(187, 187, 187);
+        }
+
+        transition: .3s all;
+
+        &:hover .hover-links {
+            display: inline;
+        }
+    }
+
+    .hover-links {
+        display: none;
+        position: absolute;
+        width: 100%;
+        background-color: $color-dark-1;
+        color: white;
+        left: 0;
+        top: 35px;
+        text-align: left;
+
+        a {
+            display: block;
+            padding: 10px;
+        }
+    }
+}
+
+//SIDEBAR
+
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: black;
+    color: white;
+    overflow: auto;
+
+    header {
+        position: relative;
+
+        h3 {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .admin-pic {
+            width: 70px;
+            margin: 0 auto;
+        }
+
+        p {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+
+            span {
+                color: rgb(172, 172, 172);
+                display: block;
+            }
+        }
+    }
+
+    .sidebar-list {
+        display: block;
+        padding-top: 15px;
+        font-size: 18px;
+        transition: 3s all;
+
+        .link {
+            padding: 15px 0 15px 20px;
+            display: block;
+            border-right: 5px solid transparent;
+
+            .sub-links {
+                margin-left: 10px;
+                display: none;
+            }
+
+            &:hover .sub-links {
+                display: block;
+            }
+        }
+
+        a {
+            display: block;
+            padding: 15px;
+            border-left: 5px solid transparent;
+
+            &:hover {
+                text-decoration: none;
+                border-left: 5px solid white;
+                background-color: #121212;
+                color: rgb(187, 187, 187);
+            }
+
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+//CONTENT
+.content {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    height: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+}

@@ -1,0 +1,146 @@
+﻿* {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0; }
+
+body {
+  width: 100%;
+  font-family: 'Roboto', sans-serif; }
+
+._navbar {
+  position: sticky;
+  top: 0;
+  background-color: #0a0a0a;
+  padding: 10px;
+  text-align: center;
+  z-index: 100; }
+  ._navbar a:hover {
+    text-decoration: none; }
+  ._navbar div, ._navbar form {
+    display: inline; }
+  ._navbar div {
+    padding: 10px; }
+  ._navbar .nav-logo a {
+    color: white;
+    text-decoration: none;
+    padding-left: 10px; }
+    ._navbar .nav-logo a h5 {
+      display: inline; }
+  ._navbar .nav-search input {
+    background-color: #121212;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 500px;
+    color: white; }
+    ._navbar .nav-search input:focus {
+      border: none;
+      outline: none; }
+  ._navbar .nav-search i {
+    color: white;
+    padding: 14px;
+    background-color: black;
+    border-radius: 50%;
+    margin-left: -45px;
+    cursor: pointer; }
+  ._navbar .nav-dropdowns {
+    color: white;
+    cursor: pointer; }
+    ._navbar .nav-dropdowns i {
+      border-radius: 50%;
+      background-color: black;
+      margin-right: 10px;
+      padding: 14px; }
+  ._navbar .vertical-line {
+    height: 100%;
+    width: 10px;
+    padding: .5px;
+    background-color: white;
+    margin: 0 10px; }
+  ._navbar .account {
+    position: relative;
+    cursor: pointer;
+    transition: .3s all; }
+    ._navbar .account .nav-pic {
+      width: 40px; }
+    ._navbar .account h6 {
+      display: inline;
+      padding: 0 10px;
+      color: white; }
+    ._navbar .account a {
+      color: #bbbbbb; }
+    ._navbar .account:hover .hover-links {
+      display: inline; }
+  ._navbar .hover-links {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #0a0a0a;
+    color: white;
+    left: 0;
+    top: 35px;
+    text-align: left; }
+    ._navbar .hover-links a {
+      display: block;
+      padding: 10px; }
+
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background: black;
+  color: white;
+  overflow: auto; }
+  .sidebar header {
+    position: relative; }
+    .sidebar header h3 {
+      text-align: center;
+      padding: 20px 0; }
+    .sidebar header .admin-pic {
+      width: 70px;
+      margin: 0 auto; }
+    .sidebar header p {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%); }
+      .sidebar header p span {
+        color: #acacac;
+        display: block; }
+  .sidebar .sidebar-list {
+    display: block;
+    padding-top: 15px;
+    font-size: 18px;
+    transition: 3s all; }
+    .sidebar .sidebar-list .link {
+      padding: 15px 0 15px 20px;
+      display: block;
+      border-right: 5px solid transparent; }
+      .sidebar .sidebar-list .link .sub-links {
+        margin-left: 10px;
+        display: none; }
+      .sidebar .sidebar-list .link:hover .sub-links {
+        display: block; }
+    .sidebar .sidebar-list a {
+      display: block;
+      padding: 15px;
+      border-left: 5px solid transparent; }
+      .sidebar .sidebar-list a:hover {
+        text-decoration: none;
+        border-left: 5px solid white;
+        background-color: #121212;
+        color: #bbbbbb; }
+      .sidebar .sidebar-list a i {
+        margin-right: 10px; }
+  .sidebar a {
+    text-decoration: none;
+    color: white; }
+
+.content {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  height: 100%;
+  padding: 20px;
+  padding-bottom: 40px; }
