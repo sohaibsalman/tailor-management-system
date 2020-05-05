@@ -26,6 +26,12 @@ namespace TMS.DAL
             }
         }
 
+        public string[] GetFileNamesWeb()
+        {
+            string[] fileNames = Directory.GetFiles("D:/PUCIT/Semester VI/EAD - Enterprise Application Development/Assignments/TMS/Windows.UI/bin/Debug/Measurements");
+            return fileNames;
+        }
+
         public DataTable GetMeasurementsFromFile(string name)
         {
             DataTable dt = new DataTable();
@@ -37,6 +43,25 @@ namespace TMS.DAL
                 {
                     DataRow dr = dt.NewRow();
                     dr["Measurements Name"] = file.ReadLine();
+                    dt.Rows.Add(dr);
+                }
+            }
+            return dt;
+        }
+
+        public DataTable GetMeasurementsFromFileWeb(string name)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Measurements Name");
+            dt.Columns.Add("Measurements Value");
+
+            using (StreamReader file = new StreamReader("D:/PUCIT/Semester VI/EAD - Enterprise Application Development/Assignments/TMS/Windows.UI/bin/Debug/Measurements/" + name + ".txt"))
+            {
+                while (!file.EndOfStream)
+                {
+                    DataRow dr = dt.NewRow();
+                    dr["Measurements Name"] = file.ReadLine();
+                    dr["Measurements Value"] = "0";
                     dt.Rows.Add(dr);
                 }
             }
@@ -77,7 +102,7 @@ namespace TMS.DAL
             }
         }
 
-        public string[] GetFileNames()
+        public string[] GetFileNames(bool flag = false)
         {
             string [] fileNames = Directory.GetFiles("Measurements/");
             return fileNames;

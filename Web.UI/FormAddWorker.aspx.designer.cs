@@ -10,7 +10,7 @@
 namespace Web.UI {
     
     
-    public partial class FormAddCustomer {
+    public partial class FormAddWorker {
         
         /// <summary>
         /// txtName control.
@@ -40,13 +40,13 @@ namespace Web.UI {
         protected global::System.Web.UI.WebControls.TextBox txtNumber;
         
         /// <summary>
-        /// txtPhone control.
+        /// dateJoining control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPhone;
+        protected global::System.Web.UI.WebControls.TextBox dateJoining;
         
         /// <summary>
         /// txtAddress control.
@@ -58,30 +58,21 @@ namespace Web.UI {
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
         
         /// <summary>
-        /// ListBox1 control.
+        /// txtSalary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox ListBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtSalary;
         
         /// <summary>
-        /// ddlMeasurementType control.
+        /// btnAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMeasurementType;
-        
-        /// <summary>
-        /// gridMeasurements control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridMeasurements;
+        protected global::System.Web.UI.WebControls.Button btnAdd;
     }
 }

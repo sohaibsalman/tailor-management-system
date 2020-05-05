@@ -187,6 +187,8 @@
     <Content Include="Default.aspx" />
     <Content Include="Fonts\font-awesome\css\all.min.css" />
     <Content Include="FormAddCustomer.aspx" />
+    <Content Include="FormAddUser.aspx" />
+    <Content Include="FormAddWorker.aspx" />
     <Content Include="FormAssignWork.aspx" />
     <Content Include="FormLogin.aspx" />
     <Content Include="FormReports.aspx" />
@@ -233,6 +235,7 @@
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\script.js" />
     <Content Include="Scripts\src\index.js" />
     <Content Include="Scripts\src\methods\defaults.js" />
     <Content Include="Scripts\src\methods\destroy.js" />
@@ -472,6 +475,20 @@
     </Compile>
     <Compile Include="FormAddCustomer.aspx.designer.cs">
       <DependentUpon>FormAddCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddUser.aspx.cs">
+      <DependentUpon>FormAddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormAddUser.aspx.designer.cs">
+      <DependentUpon>FormAddUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddWorker.aspx.cs">
+      <DependentUpon>FormAddWorker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormAddWorker.aspx.designer.cs">
+      <DependentUpon>FormAddWorker.aspx</DependentUpon>
     </Compile>
     <Compile Include="FormAssignWork.aspx.cs">
       <DependentUpon>FormAssignWork.aspx</DependentUpon>

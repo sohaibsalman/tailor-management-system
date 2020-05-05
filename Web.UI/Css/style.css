@@ -173,7 +173,7 @@ body {
           text-decoration: none;
           background-color: #C0C0C0; }
 
-.customer-personal-info {
+.customer-personal-info, .worker-info {
   padding: 20px 0 30px 0; }
 
 ._form label {
@@ -200,10 +200,82 @@ body {
     border-color: #024cbb;
     outline: none; }
 
+.measurement--btns {
+  text-align: right;
+  margin-bottom: 15px; }
+  .measurement--btns a {
+    margin: 5px 0 10px 5px;
+    color: white;
+    padding: 7px 15px;
+    font-size: 20px;
+    cursor: pointer; }
+    .measurement--btns a:hover {
+      text-decoration: none; }
+  .measurement--btns #measurement--btns-add {
+    background: #024cbb;
+    transition: all .3s; }
+    .measurement--btns #measurement--btns-add:hover {
+      background-color: #0242a2; }
+  .measurement--btns #measurement--btns-remove {
+    background-color: darkred;
+    transition: all .3s; }
+    .measurement--btns #measurement--btns-remove:hover {
+      background-color: #720000; }
+
 .listBox {
   width: 100%;
   border: 1px solid black;
   border-radius: 5px; }
   .listBox:focus {
     border-color: #024cbb;
+    outline: none; }
+
+._popup {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  overflow: auto; }
+  ._popup ._popup-close_btn {
+    text-align: right; }
+    ._popup ._popup-close_btn i {
+      font-size: 25px;
+      cursor: pointer; }
+  ._popup ._popup-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 90%;
+    padding: 40px;
+    border-radius: 5px; }
+    ._popup ._popup-body .measurement-list {
+      width: 100%; }
+
+.measurement-data h5 {
+  margin-bottom: 10px; }
+
+.measurement-data select {
+  font-size: 20px; }
+
+._btn-fixed--add {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 10px 22px;
+  font-size: 25px;
+  border-radius: 50%;
+  background-color: green;
+  border: none;
+  color: white;
+  transition: all .3s; }
+  ._btn-fixed--add:hover {
+    background-color: #006700;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); }
+  ._btn-fixed--add:focus {
     outline: none; }

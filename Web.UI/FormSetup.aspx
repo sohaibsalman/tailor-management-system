@@ -19,10 +19,10 @@
                                 <asp:LinkButton ID="linkNewCustomer" runat="server" OnClick="linkNewCustomer_Click">Add Customer Data</asp:LinkButton>
                             </li>
                             <li>
-                                <asp:LinkButton ID="linkNewWorker" runat="server">Add Worker Data</asp:LinkButton>
+                                <asp:LinkButton ID="linkNewWorker" runat="server" OnClick="linkNewWorker_Click">Add Worker Data</asp:LinkButton>
                             </li>
                             <li>
-                                <asp:LinkButton ID="linkNewUser" runat="server">Add User Data</asp:LinkButton>
+                                <asp:LinkButton ID="linkNewUser" runat="server" OnClick="linkNewUser_Click">Add User Data</asp:LinkButton>
                             </li>
                         </ul>
                     </div>

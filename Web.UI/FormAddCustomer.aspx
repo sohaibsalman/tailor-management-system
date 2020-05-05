@@ -42,7 +42,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <label for="">Address: </label>
-                                        <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" CssClass ="multiline"></asp:TextBox>
+                                        <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" CssClass="multiline"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -58,14 +58,49 @@
                         <hr />
                     </div>
                     <div class="measurements">
-                        
-                        <asp:ListBox ID="ListBox1" runat="server" CssClass="listBox">
-                        </asp:ListBox>
+                        <div class="measurement--btns">
+                            <a id="measurement--btns-add">+</a>
+                            <a id="measurement--btns-remove">-</a>
+                        </div>
+                        <asp:ListBox ID="ListBox1" runat="server" CssClass="listBox"></asp:ListBox>
                     </div>
                 </div>
             </div>
 
         </section>
+
+    </div>
+
+    <div class="_popup" id="popup-add_measurement">
+        <div class="_popup-body">
+            <div class="_popup-close_btn">
+                <i class="fas fa-times " id="popup-close"></i>
+            </div>
+
+
+            <div class="measurement-data">
+                <h5>Select Type</h5>
+                <asp:DropDownList ID="ddlMeasurementType" runat="server" CssClass="measurement-list" OnSelectedIndexChanged="ddlMeasurementType_SelectedIndexChanged"></asp:DropDownList>
+                <hr />
+                <asp:GridView ID="gridMeasurements" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" CssClass="table" OnRowEditing="gridMeasurements_RowEditing">
+                    <Columns>
+                        <asp:CommandField ShowEditButton="True" />
+                    </Columns>
+                    
+                    <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                    <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                    <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                    <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                    <SortedDescendingHeaderStyle BackColor="#242121" />
+                    
+                </asp:GridView>
+
+            </div>
+
+        </div>
     </div>
 
 </asp:Content>

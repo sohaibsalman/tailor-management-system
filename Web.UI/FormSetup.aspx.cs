@@ -21,5 +21,15 @@ namespace Web.UI
         {
             Response.Redirect("~/FormAddCustomer.aspx");
         }
+
+        protected void linkNewWorker_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/FormAddWorker.aspx");
+        }
+
+        protected void linkNewUser_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/FormAddUser.aspx");
+        }
     }
 }

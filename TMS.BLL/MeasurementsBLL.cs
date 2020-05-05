@@ -20,6 +20,11 @@ namespace TMS.BLL
             return new MeasurementsDAL().GetFileNames();
         }
 
+        public string[] GetFileNamesWeb()
+        {
+            return new MeasurementsDAL().GetFileNamesWeb();
+        }
+
         public DataTable GetMeasurementsFromFile(string filename)
         {
             return new MeasurementsDAL().GetMeasurementsFromFile(filename);
@@ -30,5 +35,9 @@ namespace TMS.BLL
             new MeasurementsDAL().CreateNewType(fileData);
         }
 
+        public DataTable GetMeasurementsFromFileWeb(string fileName)
+        {
+            return new MeasurementsDAL().GetMeasurementsFromFileWeb(fileName);
+        }
     }
 }
