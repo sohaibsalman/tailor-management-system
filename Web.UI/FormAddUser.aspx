@@ -55,7 +55,7 @@
 
         </section>
 
-        <asp:Button ID="btnAdd" runat="server" Text="+" CssClass="_btn-fixed--add" />
+        <asp:Button ID="btnAdd" runat="server" Text="+" CssClass="_btn-fixed--add" OnClick="btnAdd_Click" />
 
     </div>
 

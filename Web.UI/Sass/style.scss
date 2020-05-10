@@ -366,13 +366,13 @@ body {
     width: 100%;
     border: 1px solid black;
     border-radius: 5px;
+
     &:focus {
         border-color: $color-blue-1;
         outline: none;
     }
-    
-    option 
-        {
+
+    option {
         padding: 8px 20px;
     }
 }
@@ -438,8 +438,8 @@ body {
             outline: none;
         }
     }
-    ._btn-measurement_add 
-        {
+
+    ._btn-measurement_add {
         padding: 10px 20px;
         background-color: green;
         border: none;
@@ -448,8 +448,8 @@ body {
         float: right;
         margin-top: 15px;
     }
-    option 
-{
+
+    option {
     }
 }
 
