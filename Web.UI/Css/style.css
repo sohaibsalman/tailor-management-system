@@ -173,7 +173,7 @@ body {
           text-decoration: none;
           background-color: #C0C0C0; }
 
-.customer-personal-info, .worker-info {
+.customer-personal-info, .worker-info, .user-info, .customer-measurement {
   padding: 20px 0 30px 0; }
 
 ._form label {
@@ -190,6 +190,9 @@ body {
     border: 1px solid #024cbb; }
   ._form input .row {
     margin-top: 20px; }
+
+._form .checkbox {
+  width: 0; }
 
 .multiline {
   width: 100%;
@@ -229,9 +232,10 @@ body {
   .listBox:focus {
     border-color: #024cbb;
     outline: none; }
+  .listBox option {
+    padding: 8px 20px; }
 
 ._popup {
-  display: none;
   position: fixed;
   height: 100vh;
   background: rgba(0, 0, 0, 0.8);
@@ -262,6 +266,27 @@ body {
 
 .measurement-data select {
   font-size: 20px; }
+
+.measurement-data td {
+  padding: 5px; }
+
+.measurement-data input[type=text] {
+  border: 1px solid black;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px; }
+  .measurement-data input[type=text]:focus {
+    border-color: #024cbb;
+    outline: none; }
+
+.measurement-data ._btn-measurement_add {
+  padding: 10px 20px;
+  background-color: green;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  float: right;
+  margin-top: 15px; }
 
 ._btn-fixed--add {
   position: fixed;

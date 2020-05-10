@@ -20,9 +20,9 @@ namespace TMS.BLL
             return new MeasurementsDAL().GetFileNames();
         }
 
-        public string[] GetFileNamesWeb()
+        public string[] GetFileNamesWeb(string path)
         {
-            return new MeasurementsDAL().GetFileNamesWeb();
+            return new MeasurementsDAL().GetFileNamesWeb(path);
         }
 
         public DataTable GetMeasurementsFromFile(string filename)

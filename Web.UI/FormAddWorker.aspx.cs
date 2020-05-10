@@ -13,5 +13,10 @@ namespace Web.UI
         {
 
         }
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,9 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TMS_Layout.Master" AutoEventWireup="true" CodeBehind="FormAddCustomer.aspx.cs" Inherits="Web.UI.FormAddCustomer" %>
+﻿
+
+<%@ Page Title="" Language="C#" MasterPageFile="~/TMS_Layout.Master" AutoEventWireup="true" CodeBehind="FormAddCustomer.aspx.cs" Inherits="Web.UI.FormAddCustomer" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>TMS - Add Customer</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
+
+
 
     <div class="content">
         <section class="section-new-user">
@@ -35,14 +39,14 @@
                                         <asp:TextBox ID="txtNumber" runat="server"></asp:TextBox>
                                     </div>
                                     <div class="col-6">
-                                        <label for="">Phone Number: </label>
-                                        <asp:TextBox ID="txtPhone" runat="server"></asp:TextBox>
+                                        <label for="">Address: </label>
+                                        <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
-                                        <label for="">Address: </label>
-                                        <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" CssClass="multiline"></asp:TextBox>
+                                        <label>Remarks</label>
+                                        <asp:TextBox ID="txtRemarks" runat="server" TextMode="MultiLine" CssClass="multiline"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -62,12 +66,13 @@
                             <a id="measurement--btns-add">+</a>
                             <a id="measurement--btns-remove">-</a>
                         </div>
-                        <asp:ListBox ID="ListBox1" runat="server" CssClass="listBox"></asp:ListBox>
+                        <asp:ListBox ID="listMeasurements" runat="server" CssClass="listBox"></asp:ListBox>
                     </div>
                 </div>
             </div>
 
         </section>
+        <asp:Button ID="btnAdd" runat="server" Text="+" CssClass="_btn-fixed--add" OnClick="btnAdd_Click" />
 
     </div>
 
@@ -80,13 +85,28 @@
 
             <div class="measurement-data">
                 <h5>Select Type</h5>
-                <asp:DropDownList ID="ddlMeasurementType" runat="server" CssClass="measurement-list" OnSelectedIndexChanged="ddlMeasurementType_SelectedIndexChanged"></asp:DropDownList>
+                <asp:DropDownList ID="ddlMeasurementType" runat="server" AutoPostBack="true" CssClass="measurement-list" OnSelectedIndexChanged="ddlMeasurementType_SelectedIndexChanged"></asp:DropDownList>
                 <hr />
-                <asp:GridView ID="gridMeasurements" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" CssClass="table" OnRowEditing="gridMeasurements_RowEditing">
+                <asp:GridView ID="gridMeasurements" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" CssClass="table" OnRowEditing="gridMeasurements_RowEditing" AutoGenerateColumns="False" OnRowCancelingEdit="gridMeasurements_RowCancelingEdit" OnRowUpdating="gridMeasurements_RowUpdating">
                     <Columns>
-                        <asp:CommandField ShowEditButton="True" />
+                        <asp:TemplateField HeaderText="Measurements Name">
+                            <EditItemTemplate>
+                                <asp:Label ID="lblMeasurementName" runat="server" Text='<%# Eval("[Measurements Name]") %>'></asp:Label>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="txtMeasurementName" runat="server" Text='<%# Bind("[Measurements Name]") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Measurements Value">
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txtMeasurementValue" runat="server" Text='<%# Bind("[Measurements Value]") %>'></asp:TextBox>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:TextBox ID="txtMeasurementValue" runat="server" Text='<%# Bind("[Measurements Value]") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                     </Columns>
-                    
+
                     <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                     <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
                     <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
@@ -95,8 +115,10 @@
                     <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
                     <SortedDescendingCellStyle BackColor="#E5E5E5" />
                     <SortedDescendingHeaderStyle BackColor="#242121" />
-                    
+
                 </asp:GridView>
+
+                <asp:Button ID="btnAddMeasurement" runat="server" Text="Add" CssClass="_btn-measurement_add" OnClick="btnAddMeasurement_Click"/>
 
             </div>
 

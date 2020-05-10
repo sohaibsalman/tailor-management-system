@@ -26,9 +26,9 @@ namespace TMS.DAL
             }
         }
 
-        public string[] GetFileNamesWeb()
+        public string[] GetFileNamesWeb(string path)
         {
-            string[] fileNames = Directory.GetFiles("D:/PUCIT/Semester VI/EAD - Enterprise Application Development/Assignments/TMS/Windows.UI/bin/Debug/Measurements");
+            string[] fileNames = Directory.GetFiles(path);
             return fileNames;
         }
 
@@ -55,7 +55,7 @@ namespace TMS.DAL
             dt.Columns.Add("Measurements Name");
             dt.Columns.Add("Measurements Value");
 
-            using (StreamReader file = new StreamReader("D:/PUCIT/Semester VI/EAD - Enterprise Application Development/Assignments/TMS/Windows.UI/bin/Debug/Measurements/" + name + ".txt"))
+            using (StreamReader file = new StreamReader(name))
             {
                 while (!file.EndOfStream)
                 {

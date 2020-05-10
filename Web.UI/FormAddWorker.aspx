@@ -57,7 +57,24 @@
 
         </section>
 
-        <asp:Button ID="btnAdd" runat="server" Text="+" CssClass="_btn-fixed--add" />
+        <asp:Button ID="btnAdd" runat="server" Text="+" CssClass="_btn-fixed--add" OnClick="btnAdd_Click" />
+
+            <div class="_popup" id="popup-add_measurement">
+        <div class="_popup-body">
+            <div class="_popup-close_btn">
+                <i class="fas fa-times " id="popup-close"></i>
+            </div>
+
+
+            <div class="form-data">
+                <h5>Are you sure you want to add following data?</h5>
+
+
+                
+            </div>
+
+        </div>
+    </div>
 
     </div>
 
