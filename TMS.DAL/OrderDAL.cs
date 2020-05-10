@@ -309,6 +309,53 @@ namespace TMS.DAL
             return "";
         }
 
+        public bool AssingToWorker(int selectedCustomer, int selectedWorker, string orderName, int price, DateTime date)
+        {
+            SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+
+            try
+            {
+                con.Open();
+
+                String query = "SELECT ID FROM Orders WHERE CustomerID = @cid AND OrderName = @ordername AND STATUS = 0";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@cid", selectedCustomer);
+                cmd.Parameters.AddWithValue("@ordername", orderName);
+
+                int id = (int)cmd.ExecuteScalar();
+
+                query = "INSERT INTO [OrdersAssigned] (WorkerID, CustomerID, OrderID, Price, DateOfAssignment, Status) VALUES (@wid, @cusid, @oid, @price, @date, @status)";
+                cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@wid", selectedWorker);
+                cmd.Parameters.AddWithValue("@cusid", selectedCustomer);
+                cmd.Parameters.AddWithValue("@oid", id);
+                cmd.Parameters.AddWithValue("@price", price);
+                cmd.Parameters.AddWithValue("@date", date);
+                cmd.Parameters.AddWithValue("@status", 0);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res < 0)
+                    return false;
+
+                query = "UPDATE Orders SET Status = 1 WHERE ID = " + id;
+                cmd = new SqlCommand(query, con);
+
+                res = cmd.ExecuteNonQuery();
+                if (res < 0)
+                    return false;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return true;
+        }
+
         public List<string> GetTypeOfMeasurement(int id)
         {
             List<String> list = new List<string>();

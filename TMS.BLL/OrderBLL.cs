@@ -49,5 +49,10 @@ namespace TMS.BLL
         {
             return new OrderDAL().GetAllOrders();
         }
+
+        public bool AssingToWorker(int customerID, int workerID, string orderName, int price, DateTime now)
+        {
+            return new OrderDAL().AssingToWorker(customerID, workerID, orderName, price, now);
+        }
     }
 }

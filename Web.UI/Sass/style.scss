@@ -291,6 +291,7 @@ body {
     label {
         font-weight: bold;
         margin-top: 10px;
+        display: block;
     }
 
     input {
@@ -306,6 +307,18 @@ body {
 
         .row {
             margin-top: 20px;
+        }
+    }
+
+    select {
+        width: 100%;
+        padding: 5px 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-size: 18px;
+        &:focus {
+            outline: none;
+            border-color:$color-blue-1;
         }
     }
 
@@ -472,5 +485,33 @@ body {
 
     &:focus {
         outline: none;
+    }
+}
+
+// Tasks Form
+.section-tasks {
+    a {
+        display: block;
+        padding: 15px;
+        font-size: 18px;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+//Assign Work Form
+.section-assign-work
+{
+    table {
+        width: 100%;
+        td, th 
+            {
+            padding: 10px;
+        }
+    }
+    h4 {
+        margin: 10px 0;
     }
 }

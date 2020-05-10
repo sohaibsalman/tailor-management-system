@@ -189,7 +189,10 @@
     <Content Include="FormAddCustomer.aspx" />
     <Content Include="FormAddUser.aspx" />
     <Content Include="FormAddWorker.aspx" />
+    <Content Include="FormAssignedTasks.aspx" />
     <Content Include="FormAssignWork.aspx" />
+    <Content Include="FormCompleteOrder.aspx" />
+    <Content Include="FormTasks.aspx" />
     <Content Include="FormLogin.aspx" />
     <Content Include="FormReports.aspx" />
     <Content Include="FormSearch.aspx" />
@@ -490,12 +493,33 @@
     <Compile Include="FormAddWorker.aspx.designer.cs">
       <DependentUpon>FormAddWorker.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FormAssignedTasks.aspx.cs">
+      <DependentUpon>FormAssignedTasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormAssignedTasks.aspx.designer.cs">
+      <DependentUpon>FormAssignedTasks.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FormAssignWork.aspx.cs">
       <DependentUpon>FormAssignWork.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FormAssignWork.aspx.designer.cs">
       <DependentUpon>FormAssignWork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormCompleteOrder.aspx.cs">
+      <DependentUpon>FormCompleteOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormCompleteOrder.aspx.designer.cs">
+      <DependentUpon>FormCompleteOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormTasks.aspx.cs">
+      <DependentUpon>FormTasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormTasks.aspx.designer.cs">
+      <DependentUpon>FormTasks.aspx</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.aspx.cs">
       <DependentUpon>FormLogin.aspx</DependentUpon>
