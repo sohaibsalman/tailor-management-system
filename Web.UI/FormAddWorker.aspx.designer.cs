@@ -40,13 +40,13 @@ namespace Web.UI {
         protected global::System.Web.UI.WebControls.TextBox txtNumber;
         
         /// <summary>
-        /// dateJoining control.
+        /// txtSalary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dateJoining;
+        protected global::System.Web.UI.WebControls.TextBox txtSalary;
         
         /// <summary>
         /// txtAddress control.
@@ -56,15 +56,6 @@ namespace Web.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
-        
-        /// <summary>
-        /// txtSalary control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSalary;
         
         /// <summary>
         /// btnAdd control.

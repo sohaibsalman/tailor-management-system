@@ -32,22 +32,18 @@
                                         <label for="">Mobile Number: </label>
                                         <asp:TextBox ID="txtNumber" runat="server"></asp:TextBox>
                                     </div>
-                                    <div class="col-6">
-                                        <label for="">Joining Date: </label>
-                                        <asp:TextBox ID="dateJoining" runat="server" TextMode="DateTime"></asp:TextBox>
+                                    <div class="col-md-6">
+                                         <label>Salary: </label>
+                                         <asp:TextBox runat="server" ID="txtSalary"/>
                                     </div>
                                 </div>
                                 <div class="row">
-                                   
-                                    <div class="col-6">
+                                    <div class="col-12">
                                         <label for="">Address: </label>
                                         <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" CssClass="multiline"></asp:TextBox>
                                     </div>
 
-                                     <div class="col-md-6">
-                                         <label>Salary: </label>
-                                         <asp:TextBox runat="server" ID="txtSalary"/>
-                                    </div>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -58,23 +54,6 @@
         </section>
 
         <asp:Button ID="btnAdd" runat="server" Text="+" CssClass="_btn-fixed--add" OnClick="btnAdd_Click" />
-
-            <div class="_popup" id="popup-add_measurement">
-        <div class="_popup-body">
-            <div class="_popup-close_btn">
-                <i class="fas fa-times " id="popup-close"></i>
-            </div>
-
-
-            <div class="form-data">
-                <h5>Are you sure you want to add following data?</h5>
-
-
-                
-            </div>
-
-        </div>
-    </div>
 
     </div>
 
