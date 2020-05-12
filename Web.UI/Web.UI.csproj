@@ -200,6 +200,8 @@
     <Content Include="FormSetup.aspx" />
     <Content Include="FormUpdateCustomer.aspx" />
     <Content Include="FormUpdateCustomerValues.aspx" />
+    <Content Include="FormUpdateUser.aspx" />
+    <Content Include="FormUpdateUserValues.aspx" />
     <Content Include="FormUpdateWorker.aspx" />
     <Content Include="FormUpdateWorkerValues.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -573,6 +575,20 @@
     </Compile>
     <Compile Include="FormUpdateCustomerValues.aspx.designer.cs">
       <DependentUpon>FormUpdateCustomerValues.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateUser.aspx.cs">
+      <DependentUpon>FormUpdateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormUpdateUser.aspx.designer.cs">
+      <DependentUpon>FormUpdateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateUserValues.aspx.cs">
+      <DependentUpon>FormUpdateUserValues.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormUpdateUserValues.aspx.designer.cs">
+      <DependentUpon>FormUpdateUserValues.aspx</DependentUpon>
     </Compile>
     <Compile Include="FormUpdateWorkerValues.aspx.cs">
       <DependentUpon>FormUpdateWorkerValues.aspx</DependentUpon>
