@@ -192,6 +192,9 @@
     <Content Include="FormAssignedTasks.aspx" />
     <Content Include="FormAssignWork.aspx" />
     <Content Include="FormCompleteOrder.aspx" />
+    <Content Include="FormSearchCustomer.aspx" />
+    <Content Include="FormSearchUser.aspx" />
+    <Content Include="FormSearchWorker.aspx" />
     <Content Include="FormTasks.aspx" />
     <Content Include="FormLogin.aspx" />
     <Content Include="FormReports.aspx" />
@@ -519,6 +522,27 @@
     </Compile>
     <Compile Include="FormCompleteOrder.aspx.designer.cs">
       <DependentUpon>FormCompleteOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormSearchCustomer.aspx.cs">
+      <DependentUpon>FormSearchCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormSearchCustomer.aspx.designer.cs">
+      <DependentUpon>FormSearchCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormSearchUser.aspx.cs">
+      <DependentUpon>FormSearchUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormSearchUser.aspx.designer.cs">
+      <DependentUpon>FormSearchUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormSearchWorker.aspx.cs">
+      <DependentUpon>FormSearchWorker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormSearchWorker.aspx.designer.cs">
+      <DependentUpon>FormSearchWorker.aspx</DependentUpon>
     </Compile>
     <Compile Include="FormTasks.aspx.cs">
       <DependentUpon>FormTasks.aspx</DependentUpon>

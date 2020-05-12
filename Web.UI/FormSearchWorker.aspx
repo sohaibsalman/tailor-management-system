@@ -1,13 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TMS_Layout.Master" AutoEventWireup="true" CodeBehind="FormUpdateWorker.aspx.cs" Inherits="Web.UI.Sass.FormUpdateWorker" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TMS_Layout.Master" AutoEventWireup="true" CodeBehind="FormSearchWorker.aspx.cs" Inherits="Web.UI.FormSearchWorker" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>TMS - Update Worker</title>
+    <title>TMS - Search Worker</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
     <div class="content">
         <div class="update_woker">
             <div class="_shadow">
-                <h3>Update Worker</h3>
+                <h3>Search Worker</h3>
             </div>
             <div class="update_worker-search">
                 <div class="_shadow">
@@ -19,12 +18,13 @@
                                 </div>
                                 <div class="col-12">
                                     <asp:TextBox ID="txtSearch" runat="server" placeholder="Search worker here..." OnTextChanged="txtSearch_TextChanged" AutoPostBack="true"></asp:TextBox>
+                                    <hr />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
                                     <div class="gridView">
-                                        <asp:GridView ID="gridCustomers" runat="server" AutoGenerateSelectButton="True" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AllowPaging="True" OnPageIndexChanging="gridCustomers_PageIndexChanging" OnSelectedIndexChanged="gridCustomers_SelectedIndexChanged" PageSize="5">
+                                        <asp:GridView ID="gridCustomers" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
                                             <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                                             <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
                                             <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
