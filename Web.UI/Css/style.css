@@ -127,7 +127,8 @@ body {
     .sidebar .sidebar-list a {
       display: block;
       padding: 15px;
-      border-left: 5px solid transparent; }
+      border-left: 5px solid transparent;
+      transition: .3s all; }
       .sidebar .sidebar-list a:hover {
         text-decoration: none;
         border-left: 5px solid white;
@@ -147,7 +148,7 @@ body {
   padding-bottom: 40px; }
 
 ._shadow {
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   margin-top: 25px;
   padding: 20px;
@@ -173,7 +174,7 @@ body {
           text-decoration: none;
           background-color: #C0C0C0; }
 
-.customer-personal-info, .worker-info, .user-info, .customer-measurement {
+.customer-personal-info, .worker-info, .user-info, .customer-measurement, .section-complete_order {
   padding: 20px 0 30px 0; }
 
 ._form label {
@@ -316,6 +317,23 @@ body {
   ._btn-fixed--add:focus {
     outline: none; }
 
+.gridView table {
+  width: 100%;
+  margin-top: 20px; }
+
+.gridView th, .gridView td {
+  padding: 10px;
+  /*a {
+            color: white;
+        }
+        span, a
+            {
+            background-color: black;
+            padding: 5px 10px;
+            color: white;   
+            border-radius: 3px;
+        }*/ }
+
 .section-tasks a {
   display: block;
   padding: 15px;
@@ -330,3 +348,151 @@ body {
 
 .section-assign-work h4 {
   margin: 10px 0; }
+
+.orders-data {
+  padding: 30px;
+  text-align: center;
+  margin-top: 10px;
+  color: white; }
+  .orders-data h5 {
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px; }
+  .orders-data--1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.99)), url("../img/new_orders.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .orders-data--2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.99)), url("../img/completed_orders.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .orders-data--3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.99)), url("../img/pending_orders.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+
+._btn {
+  text-align: center;
+  display: block;
+  width: 100%; }
+  ._btn a {
+    color: white;
+    padding: 15px 80px;
+    border-radius: 500px;
+    transition: all .3s; }
+    ._btn a:hover {
+      text-decoration: none; }
+
+._btn-black {
+  background-color: #024cbb; }
+  ._btn-black:hover {
+    color: white;
+    background-color: #151618; }
+
+.count_label {
+  display: block;
+  font-size: 60px;
+  color: #f12711; }
+
+.sales-stats {
+  padding: 30px 20px;
+  text-align: center;
+  color: white; }
+  .sales-stats hr {
+    background-color: white; }
+  .sales-stats--1 {
+    background: linear-gradient(to right bottom, #4b6cb7, #182848); }
+  .sales-stats--2 {
+    background: linear-gradient(to right bottom, #f5af19, #f12711); }
+  .sales-stats--3 {
+    background: linear-gradient(to right bottom, #C04848, #480048); }
+  .sales-stats--4 {
+    background: linear-gradient(to right bottom, #71B280, #134E5E); }
+
+._wrapper {
+  position: relative;
+  height: 100vh;
+  background-color: #DCDCDC; }
+  ._wrapper .login_form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 5px;
+    width: 70%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+    ._wrapper .login_form .left_side {
+      position: absolute;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.99)), url("../img/login.jpg");
+      background-position: center;
+      background-size: cover;
+      width: 400px;
+      height: 100%;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      color: white; }
+      ._wrapper .login_form .left_side .left_content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center; }
+        ._wrapper .login_form .left_side .left_content h6 {
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          font-weight: 300; }
+    ._wrapper .login_form .right_side {
+      margin-left: 400px;
+      padding: 70px 70px; }
+      ._wrapper .login_form .right_side h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: bolder; }
+      ._wrapper .login_form .right_side h3, ._wrapper .login_form .right_side h6 {
+        margin: 10px 0; }
+      ._wrapper .login_form .right_side h6 {
+        color: #525252; }
+      ._wrapper .login_form .right_side ._form label, ._wrapper .login_form .right_side ._form a {
+        display: block;
+        margin-top: 15px; }
+      ._wrapper .login_form .right_side ._form a {
+        text-align: right;
+        font-size: 14px; }
+    ._wrapper .login_form input, ._wrapper .login_form select {
+      border: none;
+      border-bottom: 2px solid black;
+      border-radius: 0;
+      padding: 5px 0; }
+      ._wrapper .login_form input:focus, ._wrapper .login_form select:focus {
+        border-color: #024cbb; }
+    ._wrapper .login_form input[type="submit"] {
+      border: none;
+      background: black;
+      padding: 10px;
+      color: white;
+      margin: 25px 0 10px 0;
+      transition: all .3s; }
+      ._wrapper .login_form input[type="submit"]:hover, ._wrapper .login_form input[type="submit"]:focus {
+        background: #024cbb; }
+
+.customer_data {
+  padding: 30px 0 40px 0; }
+
+.u-margin-top-huge {
+  margin-top: 50px; }
+
+.u-margin-top-large {
+  margin-top: 40px; }
+
+.u-margin-top-medium {
+  margin-top: 30px; }
+
+.u-margin-top-small {
+  margin-top: 20px; }
+
+.u-margin-top-tiny {
+  margin-top: 10px; }

@@ -31,5 +31,35 @@ namespace Web.UI
         {
             Response.Redirect("~/FormAddUser.aspx");
         }
+
+        protected void linkUpdateCustomer_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/FormUpdateCustomer.aspx");
+        }
+
+        protected void linkUpdateWorker_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/FormUpdateWorker.aspx");
+        }
+
+        protected void linkUpdateUser_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/FormUpdateUser.aspx");
+        }
+
+        protected void linkDeleteCustomer_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/FormDeleteCustomer.aspx");
+        }
+
+        protected void linkDeleteWorker_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/FormDeleteWorker.aspx");
+        }
+
+        protected void linkDeleteUser_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/FormDeleteUser.aspx");
+        }
     }
 }

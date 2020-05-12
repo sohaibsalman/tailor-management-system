@@ -198,6 +198,8 @@
     <Content Include="FormSearch.aspx" />
     <Content Include="FormSettings.aspx" />
     <Content Include="FormSetup.aspx" />
+    <Content Include="FormUpdateCustomer.aspx" />
+    <Content Include="FormUpdateCustomerValues.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -555,6 +557,20 @@
     </Compile>
     <Compile Include="FormSetup.aspx.designer.cs">
       <DependentUpon>FormSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateCustomer.aspx.cs">
+      <DependentUpon>FormUpdateCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormUpdateCustomer.aspx.designer.cs">
+      <DependentUpon>FormUpdateCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateCustomerValues.aspx.cs">
+      <DependentUpon>FormUpdateCustomerValues.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormUpdateCustomerValues.aspx.designer.cs">
+      <DependentUpon>FormUpdateCustomerValues.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

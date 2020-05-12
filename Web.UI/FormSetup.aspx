@@ -38,13 +38,13 @@
                     <div class="links">
                         <ul>
                             <li>
-                                <asp:LinkButton ID="linkUpdateCustomer" runat="server">Update Customer Data</asp:LinkButton>
+                                <asp:LinkButton ID="linkUpdateCustomer" runat="server" OnClick="linkUpdateCustomer_Click">Update Customer Data</asp:LinkButton>
                             </li>
                             <li>
-                                <asp:LinkButton ID="linkUpdateWorker" runat="server">Update Worker Data</asp:LinkButton>
+                                <asp:LinkButton ID="linkUpdateWorker" runat="server" OnClick="linkUpdateWorker_Click">Update Worker Data</asp:LinkButton>
                             </li>
                             <li>
-                                <asp:LinkButton ID="linkUpdateUser" runat="server">Update User Data</asp:LinkButton>
+                                <asp:LinkButton ID="linkUpdateUser" runat="server" OnClick="linkUpdateUser_Click">Update User Data</asp:LinkButton>
                             </li>
                         </ul>
                     </div>
@@ -60,13 +60,13 @@
                     <div class="links">
                         <ul>
                             <li>
-                                <asp:LinkButton ID="linkDeleteCustomer" runat="server">Delete Customer Data</asp:LinkButton>
+                                <asp:LinkButton ID="linkDeleteCustomer" runat="server" OnClick="linkDeleteCustomer_Click">Delete Customer Data</asp:LinkButton>
                             </li>
                             <li>
-                                <asp:LinkButton ID="linkDeleteWorker" runat="server">Delete Worker Data</asp:LinkButton>
+                                <asp:LinkButton ID="linkDeleteWorker" runat="server" OnClick="linkDeleteWorker_Click">Delete Worker Data</asp:LinkButton>
                             </li>
                             <li>
-                                <asp:LinkButton ID="linkDeleteUser" runat="server">Delete User Data</asp:LinkButton>
+                                <asp:LinkButton ID="linkDeleteUser" runat="server" OnClick="linkDeleteUser_Click">Delete User Data</asp:LinkButton>
                             </li>
                         </ul>
                     </div>

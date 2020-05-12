@@ -215,7 +215,7 @@ body {
             display: block;
             padding: 15px;
             border-left: 5px solid transparent;
-
+            transition: .3s all;
             &:hover {
                 text-decoration: none;
                 border-left: 5px solid white;
@@ -245,7 +245,7 @@ body {
 }
 
 ._shadow {
-    box-shadow: 0 3px 12px rgba(black, .4);
+    box-shadow: 0 3px 12px rgba(black, .5);
     border-radius: 5px;
     margin-top: 25px;
     padding: 20px;
@@ -283,7 +283,7 @@ body {
     }
 }
 
-.customer-personal-info, .worker-info, .user-info, .customer-measurement {
+.customer-personal-info, .worker-info, .user-info, .customer-measurement, .section-complete_order {
     padding: 20px 0 30px 0;
 }
 
@@ -316,9 +316,10 @@ body {
         border: 1px solid black;
         border-radius: 5px;
         font-size: 18px;
+
         &:focus {
             outline: none;
-            border-color:$color-blue-1;
+            border-color: $color-blue-1;
         }
     }
 
@@ -392,7 +393,6 @@ body {
 
 
 ._popup {
-    //display: none;
     position: fixed;
     height: 100vh;
     background: rgba(black, .8);
@@ -488,6 +488,27 @@ body {
     }
 }
 
+.gridView {
+    table {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+        /*a {
+            color: white;
+        }
+        span, a
+            {
+            background-color: black;
+            padding: 5px 10px;
+            color: white;   
+            border-radius: 3px;
+        }*/
+    }
+}
+
 // Tasks Form
 .section-tasks {
     a {
@@ -502,16 +523,233 @@ body {
 }
 
 //Assign Work Form
-.section-assign-work
-{
+.section-assign-work {
     table {
         width: 100%;
-        td, th 
-            {
+
+        td, th {
             padding: 10px;
         }
     }
+
     h4 {
         margin: 10px 0;
     }
+}
+
+//HOMEPAGE
+.orders-data {
+    padding: 30px;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+
+    h5 
+        {
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 2px;
+    }
+
+    &--1 
+        {
+        background: linear-gradient(rgba(black, .7), rgba(black, .99)),url("../img/new_orders.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+     &--2 
+        {
+        background: linear-gradient(rgba(black, .7), rgba(black, .99)),url("../img/completed_orders.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+      &--3 
+        {
+        background: linear-gradient(rgba(black, .7), rgba(black, .99)),url("../img/pending_orders.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+._btn {
+    text-align: center;
+    display: block;
+    width: 100%;
+
+    a {
+        color: white;
+        padding: 15px 80px;
+        border-radius: 500px;
+        transition: all .3s;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+._btn-black {
+    background-color: $color-blue-1;
+
+    &:hover {
+        color: white;
+        background-color: $color-gray-2;
+    }
+}
+
+.count_label {
+    display: block;
+    font-size: 60px;
+    color: $gradient-2b;
+}
+
+.sales-stats
+{
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+    hr 
+    {
+        background-color: white;
+    }
+    &--1 
+    {
+        background: linear-gradient(to right bottom, $gradient-1a, $gradient-1b);
+    }
+    &--2 
+    {
+        background: linear-gradient(to right bottom, $gradient-2a, $gradient-2b);
+    }
+    &--3 
+    {
+        background: linear-gradient(to right bottom, $gradient-3a, $gradient-3b);
+    }
+    &--4 
+    {
+        background: linear-gradient(to right bottom, $gradient-4a, $gradient-4b);
+    }
+}
+
+
+//Login Screen
+._wrapper {
+    position: relative;
+    height: 100vh;
+    background-color: $color-gray-light-2;
+
+    .login_form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border-radius: 5px;
+        width: 70%;
+        box-shadow: 0 0 10px rgba(black, .5);
+        .left_side {
+            position: absolute;
+            background: linear-gradient(rgba(black, .7), rgba(black, .99)), url("../img/login.jpg");
+            background-position: center;
+            background-size: cover;
+            width: 400px;
+            height: 100%;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            color: white;
+            .left_content {
+                position: absolute;
+                top: 50%;
+                left: 50%;  
+                transform: translate(-50%, -50%);
+                text-align:center;
+                h6 {
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    font-weight: 300;
+                }
+            }
+        }
+        .right_side
+            {
+             margin-left: 400px;
+             padding: 70px 70px;
+             h1 
+                 {
+                 text-align: center;
+                 margin-bottom: 20px;
+                 font-weight: bolder;
+            
+             }
+             h3, h6 
+                 {
+                 margin: 10px 0;
+             }
+             h6 
+                 {
+                 color: $color-gray;
+             }
+             ._form 
+                 {
+                 label, a {
+                     display: block;
+                     margin-top: 15px;
+                 }
+                 a {
+                     text-align:right;
+                     font-size: 14px;       
+                 }
+             }
+        }
+        input, select
+            {
+            border: none;
+            border-bottom: 2px solid black;
+            border-radius: 0;
+            padding: 5px 0;
+            &:focus 
+                {
+                border-color: $color-blue-1;
+            }
+        }
+        input[type="submit"]
+        {
+            border: none;
+            background: black;
+            padding: 10px;
+            color: white;
+            margin: 25px 0 10px 0;
+            transition: all .3s;
+            &:hover, &:focus {
+                background: $color-blue-1;
+            }   
+        }
+    }
+}
+
+.customer_data 
+{
+    padding: 30px 0 40px 0;
+}
+
+.u-margin-top-huge {
+    margin-top: 50px;
+}
+
+.u-margin-top-large {
+    margin-top: 40px;
+}
+
+.u-margin-top-medium {
+    margin-top: 30px;
+}
+
+.u-margin-top-small {
+    margin-top: 20px;
+}
+
+.u-margin-top-tiny {
+    margin-top: 10px;
 }

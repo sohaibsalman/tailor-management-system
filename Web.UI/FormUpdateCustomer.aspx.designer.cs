@@ -10,24 +10,24 @@
 namespace Web.UI {
     
     
-    public partial class FormCompleteOrder {
+    public partial class FormUpdateCustomer {
         
         /// <summary>
-        /// txtSearchOrder control.
+        /// txtSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSearchOrder;
+        protected global::System.Web.UI.WebControls.TextBox txtSearch;
         
         /// <summary>
-        /// gridOrdersInfo control.
+        /// gridCustomer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridOrdersInfo;
+        protected global::System.Web.UI.WebControls.GridView gridCustomer;
     }
 }
