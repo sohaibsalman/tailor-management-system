@@ -1,14 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TMS_Layout.Master" AutoEventWireup="true" CodeBehind="FormAddWorker.aspx.cs" Inherits="Web.UI.FormAddWorker" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TMS_Layout.Master" AutoEventWireup="true" CodeBehind="FormUpdateWorkerValues.aspx.cs" Inherits="Web.UI.FormUpdateWorkerValues" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>TMS - Add Worker</title>
+    <title>TMS - Update Worker</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
-
     <div class="content">
         <section class="section-new-user">
-            <div class="_shadow">
-                <h3>Add New Worker</h3>
-            </div>
             <div class="_shadow">
                 <div class="worker-info">
                     <div class="heading">
@@ -43,8 +39,6 @@
                                         <label for="">Address: </label>
                                         <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" CssClass="multiline"></asp:TextBox>
                                     </div>
-
-                                     
                                 </div>
                             </div>
                         </div>
@@ -54,9 +48,7 @@
 
         </section>
 
-        <asp:Button ID="btnAdd" runat="server" Text="+" CssClass="_btn-fixed--add" OnClick="btnAdd_Click" />
+        <asp:Button ID="btnUpdate" runat="server" Text="&#10004;" CssClass="_btn-fixed--add" OnClick="btnUpdate_Click"/>
 
     </div>
-
-
 </asp:Content>

@@ -200,6 +200,8 @@
     <Content Include="FormSetup.aspx" />
     <Content Include="FormUpdateCustomer.aspx" />
     <Content Include="FormUpdateCustomerValues.aspx" />
+    <Content Include="FormUpdateWorker.aspx" />
+    <Content Include="FormUpdateWorkerValues.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -572,11 +574,25 @@
     <Compile Include="FormUpdateCustomerValues.aspx.designer.cs">
       <DependentUpon>FormUpdateCustomerValues.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FormUpdateWorkerValues.aspx.cs">
+      <DependentUpon>FormUpdateWorkerValues.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormUpdateWorkerValues.aspx.designer.cs">
+      <DependentUpon>FormUpdateWorkerValues.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormUpdateWorker.aspx.cs">
+      <DependentUpon>FormUpdateWorker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormUpdateWorker.aspx.designer.cs">
+      <DependentUpon>FormUpdateWorker.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="TMS_Layout.Master.cs">
       <DependentUpon>TMS_Layout.Master</DependentUpon>
