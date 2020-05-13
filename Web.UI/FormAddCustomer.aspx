@@ -5,9 +5,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
 
-   
-
-
     <div class="content">
         <section class="section-new-user">
             <div class="_shadow">
@@ -86,7 +83,7 @@
                 <h5>Select Type</h5>
                 <asp:DropDownList ID="ddlMeasurementType" runat="server" AutoPostBack="true" CssClass="measurement-list" OnSelectedIndexChanged="ddlMeasurementType_SelectedIndexChanged"></asp:DropDownList>
                 <hr />
-                <asp:GridView ID="gridMeasurements" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" CssClass="table" OnRowEditing="gridMeasurements_RowEditing" AutoGenerateColumns="False" OnRowCancelingEdit="gridMeasurements_RowCancelingEdit" OnRowUpdating="gridMeasurements_RowUpdating">
+                <asp:GridView ID="gridMeasurements" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" CssClass="table"  AutoGenerateColumns="False" >
                     <Columns>
                         <asp:TemplateField HeaderText="Measurements Name">
                             <EditItemTemplate>

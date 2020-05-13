@@ -32,6 +32,7 @@ namespace Web.UI
                     txtNumber.Text = c.ContactNumber;
                     txtRemarks.Text = c.Remarks;
                 }
+                ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "tmp", "<script type='text/javascript'> document.getElementById('popup-add_measurement').style.display = 'none'; </script>", false);
                 measurementList = new List<Dictionary<string, int>>();
                 String path = @"~/files";
                 String ph_path = Server.MapPath(path);
@@ -46,6 +47,8 @@ namespace Web.UI
                 ddlMeasurementType.DataSource = files;
                 ddlMeasurementType.SelectedIndex = 0;
                 ddlMeasurementType.DataBind();
+
+                DataBindGrid();
             }
             
         }
@@ -90,6 +93,9 @@ namespace Web.UI
 
             String fileName = ddlMeasurementType.SelectedValue;
             listMeasurements.Items.Add(fileName);
+            Response.Write("<script> alert('Measurement Added!') </script>");
+
+            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "tmp", "<script type='text/javascript'> document.getElementById('popup-add_measurement').style.display = 'none'; </script>", false);
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e)
@@ -124,6 +130,7 @@ namespace Web.UI
             {
                 Response.Write("<script>alert('Error Updating the Customer!')</script>");
             }
+            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "tmp", "<script type='text/javascript'> document.getElementById('popup-add_measurement').style.display = 'none'; </script>", false);
         }
     }
 }

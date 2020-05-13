@@ -7,3 +7,7 @@ $("#popup-close").click(function () {
     $("._popup").fadeOut();
 });
 
+function hide_popup() {
+    alert("asd");
+    $("._popup").css("display:", "none");
+}

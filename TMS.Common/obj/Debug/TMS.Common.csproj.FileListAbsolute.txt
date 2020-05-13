@@ -2,4 +2,3 @@ D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TM
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.Common\bin\Debug\TMS.Common.pdb
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.Common\obj\Debug\TMS.Common.dll
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.Common\obj\Debug\TMS.Common.pdb
-D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.Common\obj\Debug\TMS.Common.csprojResolveAssemblyReference.cache

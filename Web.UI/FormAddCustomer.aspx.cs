@@ -17,6 +17,9 @@ namespace Web.UI
         {
             if(!IsPostBack)
             {
+
+                ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "tmp", "<script type='text/javascript'> document.getElementById('popup-add_measurement').style.display = 'none'; </script>", false);
+
                 measurementList = new List<Dictionary<string, int>>();
                 String path = @"~/files";
                 String ph_path = Server.MapPath(path);
@@ -31,6 +34,8 @@ namespace Web.UI
                 ddlMeasurementType.DataSource = files;
                 ddlMeasurementType.SelectedIndex = 0;
                 ddlMeasurementType.DataBind();
+
+                DataBindGrid();
             }
         }
 
@@ -47,17 +52,6 @@ namespace Web.UI
             DataBindGrid();
         }
 
-        protected void gridMeasurements_RowEditing(object sender, GridViewEditEventArgs e)
-        {
-            gridMeasurements.EditIndex = e.NewEditIndex;
-            DataBindGrid();
-        }
-
-        protected void gridMeasurements_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
-        {
-            gridMeasurements.EditIndex = -1;
-            DataBindGrid();
-        }
 
         private void DataBindGrid()
         {
@@ -70,15 +64,14 @@ namespace Web.UI
             gridMeasurements.DataBind();
         }
 
-        protected void gridMeasurements_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        private void DataBindGrid(String fileName)
         {
-            GridViewRow row = gridMeasurements.Rows[e.RowIndex];
-            TextBox txtMeasurementValues = (TextBox) row.FindControl("txtMeasurementValue");
-
-            gridMeasurements.Rows[e.RowIndex].Cells[1].Text = txtMeasurementValues.Text;
-            gridMeasurements.EditIndex = -1;
-
-            DataBindGrid();
+            String path = "~/files/";
+            String ph_path = Server.MapPath(path);
+            ph_path += fileName;
+            DataTable dt = new MeasurementsBLL().GetMeasurementsFromFileWeb(ph_path);
+            gridMeasurements.DataSource = dt;
+            gridMeasurements.DataBind();
         }
 
         protected void btnAddMeasurement_Click(object sender, EventArgs e)
@@ -96,7 +89,9 @@ namespace Web.UI
             String fileName = ddlMeasurementType.SelectedValue;
             listMeasurements.Items.Add(fileName);
 
+            Response.Write("<script> alert('Measurement Added!') </script>");
 
+            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "tmp", "<script type='text/javascript'> document.getElementById('popup-add_measurement').style.display = 'none'; </script>", false);
 
         }
 
@@ -122,10 +117,12 @@ namespace Web.UI
             String msg = new CustomerBLL().AddCustomer(c, orderName);
             if (msg.Trim() == "")
             {
-                Response.Write("<script><alert>Customer Added!</alert></script>");
+                Response.Write("<script> alert('Customer Added Successfully!') </script>");
             }
             else
-                Response.Write("<script><alert>Customer NOT Added!</alert></script>");
+                Response.Write("<script> alert('Error Adding the Customer!') </script>");
+
+            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "tmp", "<script type='text/javascript'> document.getElementById('popup-add_measurement').style.display = 'none'; </script>", false);
         }
     }
 }
