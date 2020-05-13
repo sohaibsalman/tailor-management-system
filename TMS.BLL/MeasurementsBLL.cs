@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TMS.Common;
 using TMS.DAL;
 
 namespace TMS.BLL
@@ -38,6 +39,11 @@ namespace TMS.BLL
         public DataTable GetMeasurementsFromFileWeb(string fileName)
         {
             return new MeasurementsDAL().GetMeasurementsFromFileWeb(fileName);
+        }
+
+        public bool InsertMeasurements(Customer c, List<string> orderName)
+        {
+            return new MeasurementsDAL().InsertMeasurements(c, orderName);
         }
     }
 }

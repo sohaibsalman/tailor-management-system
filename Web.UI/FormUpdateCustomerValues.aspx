@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </div>
-            <asp:Button ID="btnAdd" runat="server" Text="+" CssClass="_btn-fixed--add" OnClick="btnAdd_Click" />
+            <asp:Button ID="btnUpdate" runat="server" Text="&#10004;" CssClass="_btn-fixed--add" OnClick="btnUpdate_Click" />
 
         </section>
     </div>

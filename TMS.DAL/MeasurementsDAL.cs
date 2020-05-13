@@ -49,6 +49,70 @@ namespace TMS.DAL
             return dt;
         }
 
+        public bool InsertMeasurements(Customer c, List<string> orderName)
+        {
+            SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+            try
+            {
+                con.Open();
+
+                int id = c.ID;
+                String query;
+                int res;
+                for (int i = 0; i < orderName.Count; i++)
+                {
+                    string tableName = orderName.ElementAt(i).Trim().ToUpper();
+                    Dictionary<String, int> d = c.Order.ElementAt(i);
+
+                    List<string> colName = new List<string>(d.Keys);
+                    List<int> colValue = new List<int>(d.Values);
+
+                    query = "INSERT INTO Measurement_" + tableName + " ( Name, CustomerID, ";
+                    //GET COLUMN NAMES
+                    for (int j = 0; j < colName.Count; j++)
+                    {
+                        query += colName.ElementAt(j);
+                        if (j != colName.Count - 1)
+                            query += ", ";
+                    }
+                    query += ") VALUES ('" + tableName.ToLower() + "', " + id.ToString() + ", ";
+                    //GET COLUMN VALUES
+                    for (int j = 0; j < colValue.Count; j++)
+                    {
+                        query += colValue.ElementAt(j);
+                        if (j != colValue.Count - 1)
+                            query += ", ";
+                    }
+
+                    query += ")";
+
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    res = cmd.ExecuteNonQuery();
+
+                    if (res < 0)
+                        return false;
+
+
+                    Order o = new Order();
+                    o.CustomerID = id;
+                    o.OrderName = orderName.ElementAt(i).Trim();
+                    o.Status = false;
+
+                    new OrderDAL().AddNewOrder(o);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return true;
+        }
+
         public DataTable GetMeasurementsFromFileWeb(string name)
         {
             DataTable dt = new DataTable();

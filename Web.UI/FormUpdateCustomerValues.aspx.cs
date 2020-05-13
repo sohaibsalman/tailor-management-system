@@ -15,23 +15,23 @@ namespace Web.UI
         private static List<Dictionary<string, int>> measurementList = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["update_customer"] == null)
+            if(!IsPostBack)
             {
-                Response.Write(@"<script> alert('Please select a customer to udpate!') </script>");
-                Response.Redirect("~/FormUpdateCustomer.aspx");
-            }
-            else
-            {
-                Customer c = (Customer)Session["update_customer"];
+                if (Session["update_customer"] == null)
+                {
+                    Response.Write(@"<script> alert('Please select a customer to udpate!') </script>");
+                    Response.Redirect("~/FormUpdateCustomer.aspx");
+                }
+                else
+                {
+                    Customer c = (Customer)Session["update_customer"];
 
-                txtName.Text = c.Name;
-                txtAddress.Text = c.Address;
-                txtCNIC.Text = c.CNIC;
-                txtNumber.Text = c.ContactNumber;
-                txtRemarks.Text = c.Remarks;
-            }
-            if (!IsPostBack)
-            {
+                    txtName.Text = c.Name;
+                    txtAddress.Text = c.Address;
+                    txtCNIC.Text = c.CNIC;
+                    txtNumber.Text = c.ContactNumber;
+                    txtRemarks.Text = c.Remarks;
+                }
                 measurementList = new List<Dictionary<string, int>>();
                 String path = @"~/files";
                 String ph_path = Server.MapPath(path);
@@ -47,6 +47,7 @@ namespace Web.UI
                 ddlMeasurementType.SelectedIndex = 0;
                 ddlMeasurementType.DataBind();
             }
+            
         }
 
 
@@ -63,18 +64,6 @@ namespace Web.UI
             DataBindGrid();
         }
 
-        protected void gridMeasurements_RowEditing(object sender, GridViewEditEventArgs e)
-        {
-            gridMeasurements.EditIndex = e.NewEditIndex;
-            DataBindGrid();
-        }
-
-        protected void gridMeasurements_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
-        {
-            gridMeasurements.EditIndex = -1;
-            DataBindGrid();
-        }
-
         private void DataBindGrid()
         {
             string fileName = ddlMeasurementType.SelectedValue + ".txt";
@@ -86,16 +75,6 @@ namespace Web.UI
             gridMeasurements.DataBind();
         }
 
-        protected void gridMeasurements_RowUpdating(object sender, GridViewUpdateEventArgs e)
-        {
-            GridViewRow row = gridMeasurements.Rows[e.RowIndex];
-            TextBox txtMeasurementValues = (TextBox)row.FindControl("txtMeasurementValue");
-
-            gridMeasurements.Rows[e.RowIndex].Cells[1].Text = txtMeasurementValues.Text;
-            gridMeasurements.EditIndex = -1;
-
-            DataBindGrid();
-        }
 
         protected void btnAddMeasurement_Click(object sender, EventArgs e)
         {
@@ -111,15 +90,12 @@ namespace Web.UI
 
             String fileName = ddlMeasurementType.SelectedValue;
             listMeasurements.Items.Add(fileName);
-
-
-
         }
 
-        protected void btnAdd_Click(object sender, EventArgs e)
+        protected void btnUpdate_Click(object sender, EventArgs e)
         {
             Customer c = new Customer();
-
+            c.ID = ((Customer)Session["update_customer"]).ID;
             c.Name = txtName.Text;
             c.CNIC = txtCNIC.Text;
             c.ContactNumber = txtNumber.Text;
@@ -135,13 +111,19 @@ namespace Web.UI
                 orderName.Add(listMeasurements.SelectedValue);
             }
 
-            String msg = new CustomerBLL().AddCustomer(c, orderName);
-            if (msg.Trim() == "")
+            //ADD CUSTOMER DATA
+            bool f1 = new CustomerBLL().UpdateCustomer(c);
+            //ADD MEASUREMENTS DATA
+            bool f2 = new MeasurementsBLL().InsertMeasurements(c, orderName);
+
+            if(f1 && f2)
             {
-                Response.Write("<script><alert>Customer Added!</alert></script>");
+                Response.Write("<script>alert('Customer Updated Successfully!')</script>");
             }
             else
-                Response.Write("<script><alert>Customer NOT Added!</alert></script>");
+            {
+                Response.Write("<script>alert('Error Updating the Customer!')</script>");
+            }
         }
     }
 }
