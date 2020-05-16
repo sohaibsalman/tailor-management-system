@@ -33,6 +33,9 @@
                         <asp:DropDownList ID="ddlUsernames" runat="server"></asp:DropDownList>
                         <label>Password</label>
                         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Enter your Password..." required></asp:TextBox>
+                        <div id="wrong_password" runat="server" class="_error">
+
+                        </div>
                         <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
                         <a href="#">Forgot your Password?</a>
                     </div>

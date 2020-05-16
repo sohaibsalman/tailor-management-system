@@ -20,22 +20,50 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-6">
-                                        <label for="">Full Name: </label>
-                                        <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="">Full Name: </label>
+                                            </div>
+                                            <div class="col-6 validate">
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*Field is Required" ControlToValidate="txtName"></asp:RequiredFieldValidator>
+                                            </div>
+                                        </div>
+                                        <asp:TextBox ID="txtName" runat="server" placeholder="User Name"></asp:TextBox>
                                     </div>
                                     <div class="col-6">
-                                        <label for="">Username: </label>
-                                        <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="">Username: </label>
+                                            </div>
+                                            <div class="col-6 validate">
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*Field is Required" ControlToValidate="txtUsername"></asp:RequiredFieldValidator>
+                                            </div>
+                                        </div>
+                                        <asp:TextBox ID="txtUsername" runat="server" placeholder="User Username"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
-                                        <label for="">Password: </label>
-                                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="">Password: </label>
+                                            </div>
+                                            <div class="col-6 validate">
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*Field is Required" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
+                                            </div>
+                                        </div>
+                                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="User Password"></asp:TextBox>
                                     </div>
                                     <div class="col-6">
-                                        <label for="">Confirm Password: </label>
-                                        <asp:TextBox ID="txtPasswordCnfrm" runat="server" TextMode="Password"></asp:TextBox>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="">Confirm Password: </label>
+                                            </div>
+                                            <div class="col-6 validate">
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*Field is Required" ControlToValidate="txtPasswordCnfrm"></asp:RequiredFieldValidator>
+                                            </div>
+                                        </div>
+                                        <asp:TextBox ID="txtPasswordCnfrm" runat="server" TextMode="Password" placeholder="Confirm Password"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -45,7 +73,7 @@
                                     </div>
                                     <div class="col-6">
                                         <label>Is Active</label>
-                                        <asp:CheckBox ID="checkActive" runat="server" CssClass="checkbox" />
+                                        <asp:CheckBox ID="checkActive" runat="server" CssClass="checkbox" Checked="true" />
                                     </div>
                                 </div>
                             </div>

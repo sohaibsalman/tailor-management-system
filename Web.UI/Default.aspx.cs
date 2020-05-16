@@ -12,7 +12,7 @@ namespace Web.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblCountNewOrders.Text =  new OrderBLL().GetAllOrders().Count.ToString();
+            lblCountNewOrders.Text =  new OrderBLL().GetNewOrders().Count.ToString();
             lblCountCompletedOrders.Text = new OrderBLL().GetCompletedOrders().Count.ToString();
             lblCountPendingOrders.Text = new OrderBLL().GetPendingOrders().Count.ToString();
 

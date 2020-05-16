@@ -33,7 +33,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label>Order Price</label>
-                                <asp:TextBox ID="txtPrice" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtPrice" runat="server" placeholder="Order Price"></asp:TextBox>
                             </div>
                         </div>
                         <div class="row">

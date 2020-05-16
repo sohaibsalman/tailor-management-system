@@ -20,6 +20,11 @@ namespace TMS.BLL
             return new OrderDAL().AssingToWorker(selectedCustomer, selectedWorker, orderName, price, date);
         }
 
+        public List<Order> GetNewOrders()
+        {
+            return new OrderDAL().GetNewOrders();
+        }
+
         public List<OrdersAssigned> GetCompletedOrders()
         {
             return new OrderDAL().GetCompletedOrders();

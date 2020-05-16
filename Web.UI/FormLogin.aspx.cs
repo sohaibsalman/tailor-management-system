@@ -32,6 +32,11 @@ namespace Web.UI
                     Session["user"] = userList[i];
                     Response.Redirect("~/Default.aspx");
                 }
+                else
+                {
+                    string html = "<div class='alert alert-danger'>Incorrect Password</div>";
+                    wrong_password.InnerHtml = html;
+                }
             }
 
         }

@@ -11,7 +11,7 @@
                     <div class="col-md-4">
                         <div class="_shadow orders-data orders-data--1">
                             <asp:Label ID="lblCountNewOrders" runat="server" Text="" CssClass="count_label"></asp:Label>
-                            <h5>Total Orders</h5>
+                            <h5>New Orders</h5>
                         </div>
                     </div>
 
