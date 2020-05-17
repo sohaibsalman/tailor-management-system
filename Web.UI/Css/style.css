@@ -496,6 +496,31 @@ body {
 ._error {
   margin-top: 20px; }
 
+.section-reports .total_summary i {
+  font-size: 30px; }
+
+.section-reports .total_summary h5 {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px; }
+
+.section-reports .total_summary span {
+  display: block;
+  font-size: 60px;
+  font-weight: bolder; }
+
+.section-reports .total_summary .div_pointer {
+  cursor: pointer; }
+
+.section-reports .earnings_summary span {
+  display: block;
+  font-size: 40px; }
+
+.section-reports .earnings_summary h6 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 1px; }
+
 .u-margin-top-huge {
   margin-top: 50px; }
 

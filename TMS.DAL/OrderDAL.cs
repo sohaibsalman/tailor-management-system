@@ -147,7 +147,15 @@ namespace TMS.DAL
                 String query = "SELECT SUM(Price) FROM OrdersAssigned WHERE Status = 1";
                 SqlCommand cmd = new SqlCommand(query, con);
 
-                sum = (int)cmd.ExecuteScalar();
+                try
+                {
+                    sum = (int)cmd.ExecuteScalar();
+                }
+                catch (Exception)
+                {
+
+                    sum = 0;
+                }
             }
             catch (Exception)
             {
