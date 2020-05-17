@@ -32,7 +32,14 @@
                                 <asp:DropDownList ID="ddlOrderName" runat="server"></asp:DropDownList>
                             </div>
                             <div class="col-md-6">
-                                <label>Order Price</label>
+                                <div class="row">
+                                    <div class="col-6">
+                                    <label>Order Price</label>
+                                    </div>
+                                    <div class="col-6 validate">
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*Field is Required" ControlToValidate="txtPrice"></asp:RequiredFieldValidator>
+                                    </div>
+                                </div>
                                 <asp:TextBox ID="txtPrice" runat="server" placeholder="Order Price"></asp:TextBox>
                             </div>
                         </div>

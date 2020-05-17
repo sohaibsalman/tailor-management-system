@@ -30,7 +30,7 @@
                     <h6>Sign in to continue</h6>
                     <div class="_form">
                         <label>Username</label>
-                        <asp:DropDownList ID="ddlUsernames" runat="server"></asp:DropDownList>
+                        <asp:DropDownList ID="ddlUsernames" runat="server" AutoPostBack="true"></asp:DropDownList>
                         <label>Password</label>
                         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Enter your Password..." required></asp:TextBox>
                         <div id="wrong_password" runat="server" class="_error">

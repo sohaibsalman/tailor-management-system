@@ -20,13 +20,13 @@
 
         <nav class="_navbar">
             <div class="nav-logo">
-                <a href="#">
+                <a href="Default.aspx">
                     <h5>Tailor Management System</h5>
                 </a>
             </div>
             <div class="vertical-line"></div>
             <div class="nav-search">
-                <input type="text" placeholder="Type to Search...">
+                <input type="text" placeholder="Type to Search..." />
                 <i class="fas fa-search"></i>
             </div>
             <div class="nav-dropdowns">
@@ -35,7 +35,7 @@
             </div>
             <div class="vertical-line"></div>
             <div class="account">
-                <img src="img/admin.png" alt="admin-pic" class="nav-pic">
+                <img src="img/admin.png" alt="admin-pic" class="nav-pic" />
                 <asp:HyperLink ID="linkNavUser" runat="server"></asp:HyperLink>
                 <div class="hover-links">
                     <ul>

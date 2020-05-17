@@ -292,16 +292,7 @@ body {
         display: block;
     }
 
-    .validate {
-        text-align: right;
-    }
 
-    span {
-        font-size: 14px;
-        color: red;
-        position: relative;
-        top: 30%;
-    }
 
     input {
         width: 100%;
@@ -782,12 +773,13 @@ body {
         }
     }
 
-    
+
     .earnings_summary {
         span {
             display: block;
             font-size: 40px;
         }
+
         h6 {
             text-transform: uppercase;
             font-weight: lighter;
@@ -796,6 +788,23 @@ body {
     }
 }
 
+.validate {
+    text-align: right;
+
+    span {
+        font-size: 14px;
+        color: red;
+        position: relative;
+        top: 30%;
+    }
+}
+
+.section-assigned_tasks 
+{
+    .search {
+        padding: 20px 20px 40px 20px;
+    }
+}
 
 .u-margin-top-huge {
     margin-top: 50px;

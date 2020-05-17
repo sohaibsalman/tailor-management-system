@@ -20,6 +20,11 @@ namespace TMS.BLL
             return new CustomerDAL().GellAllCustomers();
         }
 
+        public List<Customer> GetCustomerOrdersList()
+        {
+            return new CustomerDAL().GetCustomerOrdersList();
+        }
+
         public string DeleteCustomer(int id)
         {
             return new CustomerDAL().DeleteCustomer(id);

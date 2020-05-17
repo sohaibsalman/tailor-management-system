@@ -179,15 +179,6 @@ body {
   margin-top: 10px;
   display: block; }
 
-._form .validate {
-  text-align: right; }
-
-._form span {
-  font-size: 14px;
-  color: red;
-  position: relative;
-  top: 30%; }
-
 ._form input {
   width: 100%;
   padding: 5px 10px;
@@ -520,6 +511,17 @@ body {
   text-transform: uppercase;
   font-weight: lighter;
   letter-spacing: 1px; }
+
+.validate {
+  text-align: right; }
+  .validate span {
+    font-size: 14px;
+    color: red;
+    position: relative;
+    top: 30%; }
+
+.section-assigned_tasks .search {
+  padding: 20px 20px 40px 20px; }
 
 .u-margin-top-huge {
   margin-top: 50px; }

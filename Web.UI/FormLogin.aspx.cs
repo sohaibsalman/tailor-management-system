@@ -13,12 +13,15 @@ namespace Web.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<User> users = new UserBLL().GetAllUsers();
-            ddlUsernames.DataSource = users;
+            if(!IsPostBack)
+            {
+                List<User> users = new UserBLL().GetAllUsers();
+                ddlUsernames.DataSource = users;
 
-            ddlUsernames.DataValueField = "Username";
-            ddlUsernames.DataTextField = "Username";
-            ddlUsernames.DataBind();
+                ddlUsernames.DataValueField = "Username";
+                ddlUsernames.DataTextField = "Username";
+                ddlUsernames.DataBind();
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)

@@ -97,6 +97,62 @@ namespace TMS.DAL
             return "";
         }
 
+        public List<Customer> GetCustomerOrdersList()
+        {
+            List<Customer> list = new List<Customer>();
+            SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+
+            try
+            {
+                con.Open();
+
+                String query = "SELECT DISTINCT CustomerID FROM Orders WHERE Status = 0";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                List<int> customerID = new List<int>();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    customerID.Add(Convert.ToInt32(reader["CustomerID"]));
+                }
+                for (int i = 0; i < customerID.Count; i++)
+                {
+                    query = "SELECT * FROM Customers WHERE ID = @id";
+                    cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@id", customerID.ElementAt(i).ToString());
+                    reader.Close();
+                    reader = cmd.ExecuteReader();
+                    while(reader.Read())
+                    {
+                        Customer c = new Customer();
+                        c.ID = (int)reader["ID"];
+                        c.Name = reader["Name"].ToString();
+                        c.CNIC = reader["CNIC"].ToString();
+                        c.ContactNumber = reader["ContactNumber"].ToString();
+                        c.Address = reader["Address"].ToString();
+                        c.Remarks = reader["Remarks"].ToString();
+
+                        list.Add(c);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+
+            return list;
+        }
+
         public bool UpdateCustomer(Customer c)
         {
             bool flag = true;

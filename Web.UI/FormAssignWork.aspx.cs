@@ -15,7 +15,7 @@ namespace Web.UI
         {
             if(!IsPostBack)
             {
-                List<Customer> customerList = new CustomerBLL().GetAllCustomers();
+                List<Customer> customerList = new CustomerBLL().GetCustomerOrdersList();
                 ddlCustomers.DataSource = customerList;
                 ddlCustomers.DataValueField = "ID";
                 ddlCustomers.DataTextField = "Name";

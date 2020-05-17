@@ -49,7 +49,15 @@ namespace TMS.DAL
                 String query = "SELECT SUM(Price) FROM OrdersAssigned WHERE Status = 0";
                 SqlCommand cmd = new SqlCommand(query, con);
 
-                sum = (int)cmd.ExecuteScalar();
+                try
+                {
+                    sum = (int)cmd.ExecuteScalar();
+                }
+                catch (Exception)
+                {
+
+                    sum = 0;
+                }
             }
             catch (Exception)
             {
@@ -407,7 +415,7 @@ namespace TMS.DAL
             try
             {
                 con.Open();
-                String query = "SELECT * FROM Orders WHERE CustomerID = @id";
+                String query = "SELECT * FROM Orders WHERE CustomerID = @id AND Status = 0";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@id", id);
 

@@ -25,7 +25,7 @@
                     <div class="col-md-4">
                         <div class="_shadow orders-data orders-data--3">
                             <asp:Label ID="lblCountPendingOrders" runat="server" Text="" CssClass="count_label"></></asp:Label>
-                            <h5>Pending Orders</h5>
+                            <h5>In progress Orders</h5>
                         </div>
                     </div>
 
