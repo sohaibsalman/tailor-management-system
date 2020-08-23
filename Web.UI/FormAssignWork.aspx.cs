@@ -39,9 +39,17 @@ namespace Web.UI
 
         protected void ddlCustomers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(ddlCustomers.SelectedItem.Value);
-            ddlOrderName.DataSource = new OrderBLL().GetTypeOfMeasurement(id);
-            ddlOrderName.DataBind();
+            try
+            {
+                int id = Convert.ToInt32(ddlCustomers.SelectedItem.Value);
+                ddlOrderName.DataSource = new OrderBLL().GetTypeOfMeasurement(id);
+                ddlOrderName.DataBind();
+            }
+            catch (Exception)
+            {
+
+            }
+            
         }
 
         protected void btnAssign_Click(object sender, EventArgs e)

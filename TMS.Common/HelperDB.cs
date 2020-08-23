@@ -8,6 +8,6 @@ namespace TMS.Common
 {
     public class HelperDB
     {
-        public static String ConnectionString = @"server=MICRO\SQLEXPRESS; database=TMS_DB; Integrated Security=SSPI;";
+        public static String ConnectionString = @"server=DESKTOP-110LEF8; database=TMS_DB; Integrated Security=SSPI;";
     }
 }

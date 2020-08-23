@@ -12,8 +12,7 @@ namespace Web.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            gridOrdersInfo.DataSource = new OrderBLL().GetPendingOrders();
-            gridOrdersInfo.DataBind();
+            data_bind();
         }
 
         protected void gridOrdersInfo_SelectedIndexChanged(object sender, EventArgs e)
@@ -22,13 +21,19 @@ namespace Web.UI
 
             if (new OrderBLL().FinishOrder(orderId))
             {
-                Response.Write(@"<script>alert('Order Finished'!)</script>");
-                Page_Load(sender, e);
+                Response.Write("<script>alert('Order Completed!')</script>");
+                data_bind();
             }
             else
             {
-                Response.Write(@"<script>alert('Error Finishing Order!')</script>");
+                Response.Write(@"<script>alert('Error Completing Order!')</script>");
             }
+        }
+
+        private void data_bind()
+        {
+            gridOrdersInfo.DataSource = new OrderBLL().GetPendingOrders();
+            gridOrdersInfo.DataBind();
         }
     }
 }

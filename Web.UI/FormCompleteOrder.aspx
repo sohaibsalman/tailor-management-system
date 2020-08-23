@@ -5,17 +5,20 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
     <section class="content">
-        <div class="_shadow">
+        <div class="_shadow gradient gradient--3">
             <h3>Finish Order</h3>
         </div>
 
-        <div class="section-complete_order">
-            <div class="_shadow">
-                <div class="_form">
+        <div class="_form">
+            <div class="section-complete_order">
+                <div class="_shadow search_bar">
                     <label>Search Order</label>
                     <asp:TextBox ID="txtSearchOrder" runat="server" placeholder="Search Order Here..."></asp:TextBox>
+                </div>
+                <div class="_shadow">
+                    <h5>Orders List</h5>
+                    <hr />
                     <div class="gridView">
-
                         <asp:GridView ID="gridOrdersInfo" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AutoGenerateColumns="False" AutoGenerateSelectButton="True" OnSelectedIndexChanged="gridOrdersInfo_SelectedIndexChanged">
                             <Columns>
                                 <asp:BoundField DataField="CustomerID" HeaderText="Customer ID" />

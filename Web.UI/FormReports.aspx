@@ -67,7 +67,7 @@
                                 <hr />
                             </div>
                             <div class="col-12">
-                                <div class="gridView">
+                                <div class="gridView" id="divInProgressOrders" runat="server">
                                     <asp:GridView ID="gridInProgress" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
                                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                                         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />

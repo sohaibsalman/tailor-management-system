@@ -6,7 +6,7 @@
 
     <div class="content">
         <section class="section-new-user">
-            <div class="_shadow">
+            <div class="_shadow gradient gradient--4">
                 <h3>Add New Worker</h3>
             </div>
             <div class="_shadow">

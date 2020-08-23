@@ -281,7 +281,7 @@ body {
     }
 }
 
-.customer-personal-info, .worker-info, .user-info, .customer-measurement, .section-complete_order {
+.customer-personal-info, .worker-info, .user-info, .customer-measurement {
     padding: 20px 0 30px 0;
 }
 
@@ -742,8 +742,8 @@ body {
     }
 }
 
-.customer_data {
-    padding: 30px 0 40px 0;
+hr {
+    background: $color-silver;
 }
 
 ._error {
@@ -799,10 +799,48 @@ body {
     }
 }
 
-.section-assigned_tasks 
-{
+.section-assigned_tasks {
     .search {
         padding: 20px 20px 40px 20px;
+    }
+}
+
+.gradient {
+    color: white;
+    padding: 30px 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 40px;
+    text-align: center;
+
+    &--1 {
+        background: linear-gradient(to right bottom, $gradient-1a, $gradient-1b);
+    }
+
+    &--2 {
+        background: linear-gradient(to right bottom, $gradient-2a, $gradient-2b);
+    }
+
+    &--3 {
+        background: linear-gradient(to right bottom, $gradient-3a, $gradient-3b);
+    }
+
+    &--4 {
+        background: linear-gradient(to right bottom, $gradient-4a, $gradient-4b);
+    }
+
+    &--5 {
+        background: linear-gradient(to right bottom, $gradient-1a, $gradient-1b);
+    }
+}
+
+.search_bar {
+    padding: 20px 20px 40px 20px;
+}
+
+.section-settings {
+    img {
+        width: 100px;
     }
 }
 

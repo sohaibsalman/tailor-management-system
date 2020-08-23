@@ -7,3 +7,13 @@ D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TM
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\obj\Debug\TMS.BLL.csprojResolveAssemblyReference.cache
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\obj\Debug\TMS.BLL.dll
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\obj\Debug\TMS.BLL.pdb
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\bin\Debug\TMS.BLL.dll
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\bin\Debug\TMS.BLL.pdb
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\bin\Debug\TMS.Common.dll
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\bin\Debug\TMS.DAL.dll
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\bin\Debug\TMS.Common.pdb
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\bin\Debug\TMS.DAL.pdb
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\obj\Debug\TMS.BLL.csprojAssemblyReference.cache
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\obj\Debug\TMS.BLL.csproj.CopyComplete
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\obj\Debug\TMS.BLL.dll
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.BLL\obj\Debug\TMS.BLL.pdb

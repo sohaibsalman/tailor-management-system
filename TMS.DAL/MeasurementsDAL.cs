@@ -26,6 +26,8 @@ namespace TMS.DAL
             }
         }
 
+
+
         public string[] GetFileNamesWeb(string path)
         {
             string[] fileNames = Directory.GetFiles(path);
@@ -47,6 +49,18 @@ namespace TMS.DAL
                 }
             }
             return dt;
+        }
+
+        public void AddNewFile(List<string> data, string ph_path)
+        {
+            using (StreamWriter file = new StreamWriter(ph_path + ".txt", true))
+            {
+                for (int i = 0; i < data.Count; i++)
+                {
+                    file.WriteLine(data.ElementAt(i));
+                }
+                file.Close();
+            }
         }
 
         public bool InsertMeasurements(Customer c, List<string> orderName)
@@ -151,6 +165,40 @@ namespace TMS.DAL
                 int columns = fileData.Count;
 
                 for (int i = 1; i < columns; i++)
+                {
+                    String colName = fileData.ElementAt(i);
+                    query = "ALTER TABLE Measurement_" + tableName + " ADD " + colName + " int";
+                    cmd = new SqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public void CreateNewType(List<string> fileData, string fileName)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(HelperDB.ConnectionString);
+                con.Open();
+
+                String tableName = fileName.ToUpper();
+
+                //Create a new table
+                String query = "CREATE TABLE Measurement_" + tableName + " ( Name varchar(100), CustomerID int )";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                cmd.ExecuteNonQuery();
+
+                int columns = fileData.Count;
+
+                for (int i = 0; i < columns; i++)
                 {
                     String colName = fileData.ElementAt(i);
                     query = "ALTER TABLE Measurement_" + tableName + " ADD " + colName + " int";

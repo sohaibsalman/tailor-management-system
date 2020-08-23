@@ -7,23 +7,28 @@
 
     <section class="section-update_customer">
         <div class="content">
-            <div class="_shadow">
+            <div class="_shadow gradient gradient--1">
                 <h3>Update Customer</h3>
             </div>
 
-            <div class="_shadow">
+            <div class="_form">
                 <div class="customer_data">
-                    <div class="_form">
+                    <div class="_shadow search_bar">
                         <div class="container">
                             <div class="row">
                                 <div class="col-12">
                                     <label>Search Customer:</label>
                                     <asp:TextBox ID="txtSearch" runat="server" placeholder="Search Customer Here" OnTextChanged="txtSearch_TextChanged" AutoPostBack="true"></asp:TextBox>
-                                    <hr />
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="_shadow">
+                        <div class="container">
                             <div class="row">
                                 <div class="col-12">
+                                    <h5>Customers List</h5>
+                                    <hr />
                                     <div class="gridView">
                                         <asp:GridView ID="gridCustomer" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AutoGenerateSelectButton="True" OnSelectedIndexChanged="gridCustomer_SelectedIndexChanged">
                                             <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
@@ -40,9 +45,8 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
+            </div>            
         </div>
     </section>
 

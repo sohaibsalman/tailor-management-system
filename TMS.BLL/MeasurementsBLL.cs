@@ -41,6 +41,16 @@ namespace TMS.BLL
             return new MeasurementsDAL().GetMeasurementsFromFileWeb(fileName);
         }
 
+        public void CreateNewType(List<string> fileData, string text)
+        {
+            new MeasurementsDAL().CreateNewType(fileData, text);
+        }
+
+        public void AddNewFile(List<string> fileData, string ph_path)
+        {
+            new MeasurementsDAL().AddNewFile(fileData, ph_path);
+        }
+
         public bool InsertMeasurements(Customer c, List<string> orderName)
         {
             return new MeasurementsDAL().InsertMeasurements(c, orderName);

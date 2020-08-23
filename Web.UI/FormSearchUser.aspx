@@ -1,18 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TMS_Layout.Master" AutoEventWireup="true" CodeBehind="FormSearchUser.aspx.cs" Inherits="Web.UI.FormSearchUser" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>TMS - Search User</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
 
     <section class="content">
-        <div class="_shadow">
+        <div class="_shadow gradient gradient--3">
             <h3>Search User</h3>
         </div>
 
 
-        <div class="update_user-search">
-            <div class="_shadow">
-                <div class="_form">
+        <div class="_form">
+            <div class="update_user-search">
+                <div class="_shadow search_bar">
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
@@ -22,8 +23,15 @@
                                 <asp:TextBox ID="txtSearch" runat="server" placeholder="Search user here..." OnTextChanged="txtSearch_TextChanged" AutoPostBack="true"></asp:TextBox>
                             </div>
                         </div>
+
+                    </div>
+                </div>
+                <div class="_shadow">
+                    <div class="container">
                         <div class="row">
                             <div class="col-12">
+                                <h5>Workers List</h5>
+                                <hr />
                                 <div class="gridView">
                                     <asp:GridView ID="gridUsers" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
                                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />

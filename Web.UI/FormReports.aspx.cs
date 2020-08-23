@@ -35,7 +35,7 @@ namespace Web.UI
                 List<OrdersAssigned> assignedOrders = new TMS.BLL.OrderBLL().GetPendingOrders();
                 if (assignedOrders.Count == 0)
                 {
-                    divPendingOrders.InnerHtml = "<div class='alert alert-danger'>No Order in Progress!</div>";
+                    divInProgressOrders.InnerHtml = "<div class='alert alert-danger'>No Order in Progress!</div>";
                 }
                 else
                 {
@@ -49,7 +49,7 @@ namespace Web.UI
 
                 lblEarningsCompleted.Text += completed.ToString();
                 lblEarningsPending.Text += pending.ToString();
-                lblEarningsTotal.Text += pending.ToString();
+                lblEarningsTotal.Text += total.ToString();
             }
         }
 

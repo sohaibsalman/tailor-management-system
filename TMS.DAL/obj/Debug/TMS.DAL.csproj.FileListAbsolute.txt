@@ -5,3 +5,11 @@ D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TM
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\obj\Debug\TMS.DAL.csprojResolveAssemblyReference.cache
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\obj\Debug\TMS.DAL.dll
 D:\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\obj\Debug\TMS.DAL.pdb
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\bin\Debug\TMS.DAL.dll
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\bin\Debug\TMS.DAL.pdb
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\bin\Debug\TMS.Common.dll
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\bin\Debug\TMS.Common.pdb
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\obj\Debug\TMS.DAL.csprojAssemblyReference.cache
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\obj\Debug\TMS.DAL.csproj.CopyComplete
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\obj\Debug\TMS.DAL.dll
+H:\Laptop\PUCIT\Semester VI\EAD - Enterprise Application Development\Assignments\TMS\TMS.DAL\obj\Debug\TMS.DAL.pdb

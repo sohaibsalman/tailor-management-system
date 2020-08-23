@@ -7,7 +7,7 @@
 
     <div class="content">
         <section class="section-new-user">
-            <div class="_shadow">
+            <div class="_shadow gradient gradient--1">
                 <h3>Add New Customer</h3>
             </div>
             <div class="_shadow">
@@ -116,7 +116,16 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <asp:DropDownList ID="ddlMeasurementType" runat="server" AutoPostBack="true" CssClass="measurement-list" OnSelectedIndexChanged="ddlMeasurementType_SelectedIndexChanged"></asp:DropDownList>
+                            <div class="row">
+                                <div class="col-11">
+                                    <asp:DropDownList ID="ddlMeasurementType" runat="server" AutoPostBack="true" CssClass="measurement-list" OnSelectedIndexChanged="ddlMeasurementType_SelectedIndexChanged"></asp:DropDownList>
+                                </div>
+                                <div class="col-1">
+                                    <div class="_button">
+                                        <a href="FormAddNewFile.aspx" target="_blank">New File</a>
+                                    </div>
+                                </div>
+                            </div>
                             <hr />
                             <asp:GridView ID="gridMeasurements" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" CssClass="table" AutoGenerateColumns="False">
                                 <Columns>

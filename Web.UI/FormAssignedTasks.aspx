@@ -7,7 +7,7 @@
 
     <div class="section-assigned_tasks">
         <section class="content">
-            <div class="_shadow">
+            <div class="_shadow gradient gradient--4">
                 <h3>Tasks Assigned to Workers</h3>
             </div>
 

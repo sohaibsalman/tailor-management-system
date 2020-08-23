@@ -6,12 +6,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
     <div class="content">
         <div class="update_woker">
-            <div class="_shadow">
+            <div class="_shadow gradient gradient--4">
                 <h3>Update Worker</h3>
             </div>
-            <div class="update_worker-search">
-                <div class="_shadow">
-                    <div class="_form">
+            <div class="_form">
+                <div class="update_worker-search">
+                    <div class="_shadow search_bar">
                         <div class="container">
                             <div class="row">
                                 <div class="col-12">
@@ -21,8 +21,14 @@
                                     <asp:TextBox ID="txtSearch" runat="server" placeholder="Search worker here..." OnTextChanged="txtSearch_TextChanged" AutoPostBack="true"></asp:TextBox>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="_shadow">
+                        <div class="container">
                             <div class="row">
                                 <div class="col-12">
+                                    <h5>Workers List</h5>
+                                    <hr />
                                     <div class="gridView">
                                         <asp:GridView ID="gridCustomers" runat="server" AutoGenerateSelectButton="True" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AllowPaging="True" OnPageIndexChanging="gridCustomers_PageIndexChanging" OnSelectedIndexChanged="gridCustomers_SelectedIndexChanged" PageSize="5">
                                             <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
